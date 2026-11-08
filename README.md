@@ -24,6 +24,9 @@ python -m http.server 8000
 ```
 
 部署：整目录上传到任意静态托管（Vercel / Netlify / GitHub Pages / Nginx）即可，无需构建。
+**详细的 GitHub + Vercel 部署步骤见 [DEPLOY.md](DEPLOY.md)**（含自定义域名、国内访问备选方案、上线前 checklist）。
+
+> 仓库已初始化（`main` 分支 + 首次提交），直接把 `git remote` 指向你的 GitHub 仓库即可推送。
 
 ## 目录结构
 

@@ -37,7 +37,7 @@
 | --- | --- |
 | 顶栏品牌标题 `.brand-title` | 页面加载（收敛为 `GXTUCTF // 广工杯`） |
 | 主按钮 `.main-enter-btn` | 页面加载 **+ 每次 `mouseenter` 重新解码** |
-| DETAIL 标题 | 点侧栏年份进入数据页时（`2026 DETAIL`） |
+| DETAIL 标题 | 点侧栏栏目进入数据页时（显示 `DATABASE[x].label`，无 label 时回退为年份） |
 | LEADERBOARD 标题 | 切 Tab 时 |
 
 **实现**（`script.js` → `class TextScramble`）：

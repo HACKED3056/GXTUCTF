@@ -301,6 +301,26 @@ body {
     transform: scale(1.05);
 }
 
+/* 参赛规则页底部的 ENTER：复用首页按钮，居中放在正文之后 */
+.detail-enter-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    padding-bottom: 10px;
+}
+
+/* 底部按钮是中文文案，CJK 字符视觉高度比拉丁字母大，字号收一档才和首页 ENTER 协调 */
+.detail-enter-wrap .main-enter-btn {
+    font-size: 2rem;
+    padding: 16px 64px;
+    letter-spacing: 10px;
+    min-width: 300px;
+}
+
+.detail-enter-wrap .main-enter-btn:hover {
+    letter-spacing: 14px;
+}
+
 /* ============================ 数据视图 ============================ */
 
 .tab-nav {
@@ -584,6 +604,17 @@ body {
     }
     .info-card {
         padding: 20px 16px;
+    }
+    /* 窄屏收窄底部 ENTER，避免 400px 最小宽度撑出横向滚动 */
+    .detail-enter-wrap {
+        margin-top: 40px;
+    }
+    .detail-enter-wrap .main-enter-btn {
+        min-width: 0;
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 2rem;
+        letter-spacing: 10px;
     }
     .detail-body {
         font-size: 0.95rem;

@@ -14,7 +14,9 @@
 const CONFIG = {
     // 品牌名：页面加载时品牌标题会解码成这段文字
     brand: "GXTUCTF // 广工杯",
-    // ENTER 按钮跳转地址：比赛平台 / 报名页
+    // 首页 ENTER 按钮进入的栏目（对应 DATABASE 的键）
+    rulesYear: "2026",
+    // 参赛规则页底部 ENTER 按钮的跳转地址：比赛平台 / 报名页
     enterUrl: "https://youyue.info/competition_detail.php?id=6"
 };
 
@@ -22,6 +24,8 @@ const CONFIG = {
 
 const DATABASE = {
     "2026": {
+        // 侧栏与详情标题显示的名称（不改 KEY，年份仍用于数据索引）
+        label: "参赛规则",
         /*
          * 赛事详情：支持 HTML（标题用 <h4>/<h5>，列表 <ul>/<li>，表格照抄下面的结构即可）。
          * 段落、列表、表格的样式在 styles.css 的 .detail-body 里。
@@ -185,26 +189,42 @@ function scrambleEl(el, text) {
     new TextScramble(el).setText(text === undefined ? baseText(el) : text);
 }
 
+// 栏目显示名：优先用 DATABASE 里的 label，没有就退回年份本身
+function yearLabel(year) {
+    return (DATABASE[year] && DATABASE[year].label) || year;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initYearList();
 
     // 品牌标题：加载时解码
     scrambleEl(document.querySelector('.brand-title'), CONFIG.brand);
 
-    // ENTER 按钮：加载时 + 每次鼠标移入时重新解码
-    const enterBtn = document.querySelector('.main-enter-btn');
-    if (enterBtn) {
-        const fx = new TextScramble(enterBtn);
-        fx.setText("ENTER");
-        enterBtn.addEventListener('mouseenter', () => fx.setText("ENTER"));
+    // ENTER / 报名入口按钮：各自解码自身文案，加载时 + 每次鼠标移入时重新解码
+    document.querySelectorAll('.main-enter-btn').forEach((btn) => {
+        const label = baseText(btn);
+        const fx = new TextScramble(btn);
+        fx.setText(label);
+        btn.addEventListener('mouseenter', () => fx.setText(label));
+    });
 
-        const link = document.getElementById('enter-link');
-        if (link && CONFIG.enterUrl) {
-            link.href = CONFIG.enterUrl;
-            // enterUrl 还是占位 "#" 时不跳转，避免点开一个空白副本
-            if (CONFIG.enterUrl === '#') {
-                link.addEventListener('click', (e) => e.preventDefault());
-            }
+    // 首页 ENTER：站内进入「参赛规则」栏目
+    const homeLink = document.getElementById('enter-link');
+    if (homeLink) {
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            openRules();
+        });
+    }
+
+    // 底部 ENTER：跳转报名页（地址见 CONFIG.enterUrl）
+    const bottomLink = document.getElementById('enter-link-bottom');
+    if (bottomLink) {
+        if (CONFIG.enterUrl && CONFIG.enterUrl !== '#') {
+            bottomLink.href = CONFIG.enterUrl;
+        } else {
+            // enterUrl 还是占位 "#" 时不跳转，避免点开一个空白页
+            bottomLink.addEventListener('click', (e) => e.preventDefault());
         }
     }
 });
@@ -216,22 +236,40 @@ function initYearList() {
     const years = Object.keys(DATABASE).sort((a, b) => b - a);
 
     container.innerHTML = years.map(year => `
-        <li class="year-item" onclick="switchYear('${year}', this)">${year}</li>
+        <li class="year-item" data-year="${year}" onclick="switchYear('${year}', this)">${yearLabel(year)}</li>
     `).join('');
 }
 
 window.switchYear = function (year, element) {
-    if (currentYear === year) return;
+    const dataView = document.getElementById('data-view');
+    // 同一栏目且视图已经可见时，不重复渲染
+    if (currentYear === year && dataView.classList.contains('active')) return;
 
     currentYear = year;
 
     document.querySelectorAll('.year-item').forEach(el => el.classList.remove('active'));
-    element.classList.add('active');
+    if (element) element.classList.add('active');
 
     document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-    document.getElementById('data-view').classList.add('active');
+    dataView.classList.add('active');
 
     renderData();
+};
+
+// 首页 ENTER：进入参赛规则栏目（并固定落在 DETAIL 标签）
+window.openRules = function () {
+    const years = Object.keys(DATABASE).sort((a, b) => b - a);
+    const year = (CONFIG.rulesYear && DATABASE[CONFIG.rulesYear]) ? CONFIG.rulesYear : years[0];
+    if (!year) return;
+
+    switchYear(year, document.querySelector(`.year-item[data-year="${year}"]`));
+
+    if (currentTab !== 'detail') {
+        switchTab('detail', document.querySelector('.tab-btn[data-tab="detail"]'));
+    }
+
+    const panel = document.querySelector('.panel-container');
+    if (panel) panel.scrollTop = 0;
 };
 
 window.closeView = function () {
@@ -257,7 +295,7 @@ window.switchTab = function (tabId, element) {
         const title = target.querySelector('[data-scramble]');
         if (title) {
             const isDetail = target.id === 'detail';
-            scrambleEl(title, isDetail && currentYear ? `${currentYear} DETAIL` : undefined);
+            scrambleEl(title, isDetail && currentYear ? yearLabel(currentYear) : undefined);
         }
     }
 };
@@ -274,7 +312,7 @@ function renderData() {
         const title = activeTabContent.querySelector('[data-scramble]');
         if (title) {
             const baseTitle = activeTabContent.id === 'detail'
-                ? `${currentYear} DETAIL`
+                ? yearLabel(currentYear)
                 : baseText(title);
             scrambleEl(title, baseTitle);
         }

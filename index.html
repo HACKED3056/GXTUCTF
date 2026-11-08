@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/fonts/fonts.css">
 
     <!-- 主样式（?v= 用于破缓存：改了 css/js 后记得同步改版本号，避免浏览器仍用旧文件） -->
-    <link rel="stylesheet" href="styles.css?v=20261108b">
+    <link rel="stylesheet" href="styles.css?v=20261108c">
 </head>
 <body>
 
@@ -46,8 +46,8 @@
 
                 <div class="center-content">
                     <div class="home-actions">
-                        <!-- ENTER 链接地址在 script.js 的 CONFIG.enterUrl 中配置 -->
-                        <a href="#" id="enter-link" target="_blank" rel="noopener" class="main-enter-btn">ENTER</a>
+                        <!-- 点击进入「参赛规则」栏目 -->
+                        <a href="#" id="enter-link" class="main-enter-btn">ENTER</a>
                     </div>
                 </div>
             </div>
@@ -55,15 +55,19 @@
             <!-- ============ 数据视图 ============ -->
             <div id="data-view" class="view">
                 <nav class="tab-nav">
-                    <button class="tab-btn active" onclick="switchTab('detail', this)">DETAIL</button>
-                    <button class="tab-btn" onclick="switchTab('rank', this)">LEADERBOARD</button>
+                    <button class="tab-btn active" data-tab="detail" onclick="switchTab('detail', this)">DETAIL</button>
+                    <button class="tab-btn" data-tab="rank" onclick="switchTab('rank', this)">LEADERBOARD</button>
                 </nav>
 
                 <div class="panel-container">
                     <section id="detail" class="tab-content active">
-                        <h3 class="section-title" data-scramble>2026 DETAIL</h3>
+                        <h3 class="section-title" data-scramble>参赛规则</h3>
                         <div class="info-card">
                             <div id="detail-text" class="detail-body">Loading...</div>
+                        </div>
+                        <!-- 底部报名入口：跳转报名页，地址见 script.js 的 CONFIG.enterUrl -->
+                        <div class="detail-enter-wrap">
+                            <a href="#" id="enter-link-bottom" target="_blank" rel="noopener" class="main-enter-btn">报名入口</a>
                         </div>
                     </section>
 
@@ -88,6 +92,6 @@
         </main>
     </div>
 
-    <script src="script.js?v=20261108b"></script>
+    <script src="script.js?v=20261108c"></script>
 </body>
 </html>

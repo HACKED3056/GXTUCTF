@@ -1,0 +1,29 @@
+{
+  "label": "clone-cert-tests",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 800 },
+    { "eval": "document.querySelectorAll('.year-item')[1].click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const y = document.querySelector('.year-item.active'); return JSON.stringify({ activeYear: y ? y.innerText.trim() : null, title: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, detail: (document.querySelector('#detail-text') || {}).innerText || null, rankRows: document.querySelectorAll('#rank-tbody tr').length }); })()" },
+    { "shot": "data-2025-year.png" },
+    { "eval": "document.querySelectorAll('.year-item')[0].click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const y = document.querySelector('.year-item.active'); return JSON.stringify({ activeYear: y ? y.innerText.trim() : null, title: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, detail: (document.querySelector('#detail-text') || {}).innerText || null, rankRows: document.querySelectorAll('#rank-tbody tr').length }); })()" },
+    { "shot": "data-2026-year.png" },
+    { "eval": "window.openCertView(); true" },
+    { "shot": "cert-title-decode-0ms.png" },
+    { "wait": 150 },
+    { "shot": "cert-title-decode-150ms.png" },
+    { "wait": 700 },
+    { "shot": "cert-view-settled.png" },
+    { "eval": "document.querySelector('#cert-name-input').value = 'nullbyte'; document.querySelector('.cert-download-btn').click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const r = document.querySelector('#cert-result'); const t = document.querySelector('#cert-view .section-title'); return JSON.stringify({ resultText: r ? r.innerText.trim() : null, boxCount: r ? r.querySelectorAll('.cert-notfound').length : 0, certTitleText: t ? t.innerText.trim() : null }); })()" },
+    { "shot": "cert-found.png" },
+    { "eval": "document.querySelectorAll('.cert-year-btn')[1].click(); document.querySelector('#cert-name-input').value = 'KernelPanic'; document.querySelector('.cert-download-btn').click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const r = document.querySelector('#cert-result'); return JSON.stringify({ yearFilter: (document.querySelector('.cert-year-btn.active') || {}).innerText || null, resultText: r ? r.innerText.trim() : null }); })()" },
+    { "shot": "cert-found-yearfilter.png" }
+  ]
+}

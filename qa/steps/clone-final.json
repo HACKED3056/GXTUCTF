@@ -1,0 +1,10 @@
+{
+  "label": "clone-final",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 2500 },
+    { "eval": "(() => { const c = (ff) => { const el = document.createElement('span'); el.style.cssText = 'position:absolute;visibility:hidden;white-space:pre;font-size:100px;font-family:' + ff; el.textContent = 'MILKDRAGONCTF0123456789'; document.body.appendChild(el); const w = el.getBoundingClientRect().width; el.remove(); return Math.round(w * 100) / 100; }; return JSON.stringify({ checkShareTechMono: document.fonts.check('16px \"Share Tech Mono\"'), shareTechMonoWidth: c('\"Share Tech Mono\", monospace'), monospaceWidth: c('monospace'), fallbackNoFontWidth: c('\"NoSuchFontXYZ\", monospace'), loadedFonts: [...document.fonts].map(f => f.family + ' / ' + f.weight + ' / ' + f.status) }); })()" },
+    { "eval": "(() => { const mk = (txt, ff, fs) => { const el = document.createElement('span'); el.style.cssText = 'position:absolute;visibility:hidden;white-space:pre;font-size:' + fs + ';font-family:' + ff; el.textContent = txt; document.body.appendChild(el); const w = el.getBoundingClientRect().width; el.remove(); return Math.round(w * 100) / 100; }; return JSON.stringify({ zh_bodyFontStack: mk('证书查询', getComputedStyle(document.body).fontFamily, '48px'), zh_shareMonoOnly: mk('证书查询', '\"Share Tech Mono\", sans-serif', '48px'), zh_plainSans: mk('证书查询', 'sans-serif', '48px'), bodyFontFamily: getComputedStyle(document.body).fontFamily, brandFontFamily: getComputedStyle(document.querySelector('.brand-title')).fontFamily, brandRect: (() => { const r = document.querySelector('.brand-title').getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; })() }); })()" },
+    { "shot": "home-final.png" }
+  ]
+}

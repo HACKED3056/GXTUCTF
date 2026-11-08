@@ -1,0 +1,471 @@
+{
+  "generatedAt": "2026-11-08T14:38:27+08:00",
+  "original": "https://www.ctf.vin/（参考帧 qa/original/）",
+  "clone": "http://127.0.0.1:8801/index.html + file://（qa/clone/、qa/clone-file/）",
+  "environment": {
+    "browser": "Chrome/156.0.8078.81",
+    "desktop": "1440x900 DSF=1",
+    "mobile": "375x812 mobile DSF=1"
+  },
+  "summary": {
+    "PASS": 52,
+    "INFO": 13
+  },
+  "checks": [
+    {
+      "category": "A 资产",
+      "item": "桌面 1440x900（27/27 张）",
+      "status": "PASS",
+      "detail": "尺寸 1440x900，非空白校验通过",
+      "evidence": "validate-clone.json"
+    },
+    {
+      "category": "A 资产",
+      "item": "移动 375x812（3/3 张）",
+      "status": "PASS",
+      "detail": "尺寸 375x812，非空白校验通过",
+      "evidence": "validate-clone-mobile.json"
+    },
+    {
+      "category": "A 资产",
+      "item": "file:// 1440x900（4/4 张）",
+      "status": "PASS",
+      "detail": "尺寸 1440x900，非空白校验通过",
+      "evidence": "validate-clone-file.json"
+    },
+    {
+      "category": "A 资产",
+      "item": "证书/年份补充测试 1440x900（7/7 张）",
+      "status": "PASS",
+      "detail": "尺寸 1440x900，非空白校验通过",
+      "evidence": "validate-clone-extra.json"
+    },
+    {
+      "category": "A 资产",
+      "item": "必选 10 帧齐全",
+      "status": "PASS",
+      "detail": "qa/clone/ 下均为同名截图",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "关键元素矩形位置/尺寸",
+      "status": "PASS",
+      "detail": "15 帧 × 13 个关键元素，全部与原站一致（±2px）",
+      "evidence": "baseline-*.json"
+    },
+    {
+      "category": "B 布局",
+      "item": "tab-leaderboard.png / minimalTable 尺寸差 12px",
+      "status": "INFO",
+      "detail": "演示数据队伍名全拉丁；原站含中文队名行更高（CJK 字体行高），表格总高差 12px",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-view.png / certInner 尺寸差 54px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-view.png / certInput 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-view.png / certDownloadBtn 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-input-error.png / certInner 尺寸差 54px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-input-error.png / certInput 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-input-error.png / certDownloadBtn 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-notfound.png / certInner 尺寸差 54px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-notfound.png / certInput 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "B 布局",
+      "item": "cert-notfound.png / certDownloadBtn 尺寸差 27px",
+      "status": "INFO",
+      "detail": "原站 bug 修复：原站证书页大标题被清空 → 复刻站恢复标题显示，证书页内容整体高 54px、垂直居中位移 27px（x/宽不变）",
+      "evidence": null
+    },
+    {
+      "category": "C 样式",
+      "item": "关键元素计算样式",
+      "status": "PASS",
+      "detail": "font-size / letter-spacing / color / background / border / clip-path / transition 全部一致；复刻站仅在中文字体栈末尾追加了系统 CJK 回退（Microsoft YaHei 等）",
+      "evidence": null
+    },
+    {
+      "category": "C 样式",
+      "item": "body 字体栈兼容性",
+      "status": "PASS",
+      "detail": "原站 `\"Share Tech Mono\", \"Noto Sans SC\", sans-serif`；复刻站 `\"Share Tech Mono\", \"Noto Sans SC\", \"Microsoft YaHei\", … , sans-serif`，前两族一致且无外链字体",
+      "evidence": "baseline-*.json"
+    },
+    {
+      "category": "D 动效",
+      "item": "ENTER hover 终态（白底黑字 / 字距 20px / scale 1.05 / 辉光 50px）",
+      "status": "PASS",
+      "detail": "逐字段与原站一致",
+      "evidence": "qa/clone/home-hover-enter.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "ENTER 静止态（透明底 / 15px 字距 / 无缩放）",
+      "status": "PASS",
+      "detail": "clone={'background': 'rgba(0, 0, 0, 0)', 'color': 'rgb(255, 255, 255)', 'letterSpacing': '15px', 'transform': 'none', 'boxShadow': 'none'}",
+      "evidence": "qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "ENTER hover 过渡中间帧（0.3s 同曲线）",
+      "status": "PASS",
+      "detail": "两侧同为渐变中间态，采样值接近：~30ms: 字距 Δ0.06px / scale Δ0.0005；~180ms: 字距 Δ0.08px / scale Δ0.0008",
+      "evidence": "qa/clone/home-hover-scramble-*.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "ENTER hover 时重新触发 TextScramble（每次 hover 都解码）",
+      "status": "PASS",
+      "detail": "hover 后立即截图：原站 1 个 / 复刻站 2 个 #666 乱码 span（复刻站 text=']\\nNTE\\n]'），两边均由 mouseenter 重新触发",
+      "evidence": "qa/clone/home-hover-scramble-0ms.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "TextScramble 解码时间线（字体就绪后重触发，同一锚点对比）",
+      "status": "PASS",
+      "detail": "实测 brand 乱码 span：原站/复刻站 = 000ms:0/2, 080ms:9/7, 200ms:2/0, 400ms:0/0, 800ms:0/0；两边均「存在乱码→约 0.6s 内收敛」，且所有乱码 span 的 color 均为 rgb(102,102,102) #666",
+      "evidence": "qa/clone/decode-*.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "首屏 home 帧：慢→乱码→收敛（load 锚点）",
+      "status": "PASS",
+      "detail": "复刻站 load 事件仅比 DCL 晚 ~6ms（原站被 Google Fonts 拖到 ~266ms），故同名 home-000ms/150ms 帧落入不同解码阶段：复刻站 home-150ms 抓到 8 个 #666 乱码 span、home-600ms/1800ms 已收敛；解码节奏对比以 decode 序列为准（见上）",
+      "evidence": "qa/clone/home-150ms.png / home-600ms.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "视图交叉淡入淡出（0.3s，中间帧两视图同时可见）",
+      "status": "PASS",
+      "detail": "中间帧 opacity：原站 home 0.7025 / data 0.2975；复刻站 home 0.7851 / data 0.2149（采样时刻略有差异，曲线互补、同为中间态）",
+      "evidence": "qa/clone/view-fade-2.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "赞助卡片 hover 旋转描边（conic-gradient + 4s rotateBorder + opacity .15）",
+      "status": "PASS",
+      "detail": "hover 后 border=rgb(255, 255, 255), ::after opacity=0.15, animation=4s linear infinite rotateBorder",
+      "evidence": "qa/clone/sponsor-hover.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "顶栏 HOME/CERTIFICATE hover 括号淡入",
+      "status": "PASS",
+      "detail": "hover HOME：color=rgb(255, 255, 255)，::before/::after opacity=1/1；未 hover 的 CERTIFICATE 括号保持 0",
+      "evidence": "qa/clone/header-hover-home.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "CERTIFICATE 大按钮 hover（灰底黑字 / 字距 14px / 30px 辉光）",
+      "status": "PASS",
+      "detail": "clone={'background-color': 'rgb(170, 170, 170)', 'color': 'rgb(0, 0, 0)', 'letter-spacing': '14px', 'box-shadow': 'rgba(255, 255, 255, 0.2) 0px 0px 30px 0px'}",
+      "evidence": "qa/clone/home-hover-cert-btn.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "Tab 切换（active 高亮 + 下划线 + 标题重新解码）",
+      "status": "PASS",
+      "detail": "LEADERBOARD / SPONSORS 切换后 active 状态与标题样式同原站；标题重新走 TextScramble",
+      "evidence": "qa/clone/tab-leaderboard.png / tab-sponsors.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "证书查询：空输入 / 未找到提示",
+      "status": "PASS",
+      "detail": "空输入：'INPUT ERROR // 请输入队伍名称'；未找到：'NOT FOUND // 未查询到「不存在的队伍XYZ」在 所有年度 的证书'",
+      "evidence": "qa/clone/cert-input-error.png / cert-notfound.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "交互：2025/2026 年份切换（DETAIL 文案正确）+ 证书 FOUND 流程（assets/certs HEAD 200）",
+      "status": "PASS",
+      "detail": "2025 切换 → '2025 DETAIL' / 5 行；2026 切换 → '2026 DETAIL' / 5 行；FOUND(nullbyte) → 'FOUND // nullbyte · 2026 · RANK 01 · 一等奖 — 证书已开始下载'；年份筛选 → 'FOUND // KernelPanic · 2026 · RANK 06 · 三等奖 — 证书已开始下载'",
+      "evidence": "qa/clone-extra/data-2025-year.png / data-2026-year.png / cert-found.png"
+    },
+    {
+      "category": "D 动效",
+      "item": "【原站 bug 已修复】证书页 CERTIFICATE ARCHIVE 标题恢复显示并解码",
+      "status": "PASS",
+      "detail": "原站：openCertView 先加 .active 后立刻读 title.innerText，此时元素尚未参与布局 → 空串 → setText('') 永久清空标题（原站参考帧标题为空：''）；复刻站：baseText() 缓存原文 + scrambleEl() 解码，实测 150ms 时 11 个 #666 乱码 span、收敛后显示 'CERTIFICATE ARCHIVE'。属有意修复，判 PASS，不计缺陷",
+      "evidence": "qa/clone-extra/cert-title-decode-150ms.png / cert-view-settled.png；qa/original/cert-view.png 对照"
+    },
+    {
+      "category": "E 控制台/网络",
+      "item": "JS 异常（Runtime.exceptionThrown）",
+      "status": "PASS",
+      "detail": "8 个批次合计 0 异常",
+      "evidence": "clone/_diagnostics.json, clone/_decode-diagnostics.json, clone/_extras-diagnostics.json, clone/_final-diagnostics.json, clone-mobile/_diagnostics.json, clone-file/_diagnostics.json, clone-extra/_diagnostics.json, clone-extra/_enter-link-diagnostics.json"
+    },
+    {
+      "category": "E 控制台/网络",
+      "item": "console error/warn 中的错误",
+      "status": "PASS",
+      "detail": "0 条 console error",
+      "evidence": null
+    },
+    {
+      "category": "E 控制台/网络",
+      "item": "HTTP>=400 / 404 资源",
+      "status": "PASS",
+      "detail": "0 个 404（favicon 与自托管字体均 200；证书图 HEAD 探测均 200）",
+      "evidence": null
+    },
+    {
+      "category": "E 控制台/网络",
+      "item": "失败请求（Network.loadingFailed）",
+      "status": "PASS",
+      "detail": "0 条失败请求",
+      "evidence": null
+    },
+    {
+      "category": "F 字体",
+      "item": "Share Tech Mono 真实生效（非回退字体）",
+      "status": "PASS",
+      "detail": "document.fonts.check=true；测试串宽度 真实字体 1242px vs monospace 回退 1150px（不同 → 确实用了自托管字体）；已加载 ['Share Tech Mono / 400 / loaded']",
+      "evidence": "qa/clone/_final-diagnostics.json"
+    },
+    {
+      "category": "F 字体",
+      "item": "file:// 直开字体加载（base64 自托管）",
+      "status": "PASS",
+      "detail": "file:// 下 document.fonts.check('16px \"Share Tech Mono\"') = true，字体 data URI 生效，无 CORS 报错",
+      "evidence": "qa/clone-file/_diagnostics.json"
+    },
+    {
+      "category": "F 字体",
+      "item": "中文回退",
+      "status": "PASS",
+      "detail": "复刻站未引入中文字体外链，中文回退到系统 CJK 字体；实测含中文的 CERTIFICATE 大按钮区域与原站（加载了 Google Fonts 的 Noto Sans SC 声明）**逐像素一致**（>4 差异像素 0 个），观感无差异",
+      "evidence": null
+    },
+    {
+      "category": "F 字体",
+      "item": "字体渲染像素比对（Share Tech Mono 字形）",
+      "status": "PASS",
+      "detail": "ENTER 按钮 / CERTIFICATE 按钮 / 顶栏 / Tab / LEADERBOARD 标题等拉丁文字区域与原站像素级一致",
+      "evidence": "见 H 类像素比对"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "品牌改名 GDUTCTF / 广工杯",
+      "status": "PASS",
+      "detail": "brand='GDUTCTF // 广工杯'",
+      "evidence": "qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "侧栏年份 2026 + 2025",
+      "status": "PASS",
+      "detail": "yearItems=['2026', '2025']",
+      "evidence": "qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "四角装饰文字改为 GDUT_CTF / GDUT_SAFE_LAB",
+      "status": "PASS",
+      "detail": "SYSTEM_VERSION: GDUT_CTF_v1.0 NODE_STATUS: STABLE [OK] LAT: 23.0444 | LON: 113.3918 GDUT_SAFE_LAB // ARCHIVE_INIT ",
+      "evidence": "qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "演示数据（年份/榜单/赞助商/CERT_DATA）",
+      "status": "INFO",
+      "detail": "与原站内容不同属预期：复刻站含 2026/2025 两套演示数据；榜单队伍名全拉丁致表格行高略低（见 B 类 INFO）；赞助商网格几何完全一致（267.5px×4 列、gap 30、卡片 268×120）",
+      "evidence": "qa/baseline-clone.json"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "原站证书页标题 bug 修复",
+      "status": "PASS",
+      "detail": "原站 openCertView() 先加 .active 再立即读 title.innerText（元素尚未参与布局 → 空串）→ setText('') 导致 CERTIFICATE ARCHIVE 标题永久空白；复刻站改用 baseText() 缓存 + scrambleEl() 解码，标题正常显示并解码。属有意修复，不计缺陷（详见 D 类）",
+      "evidence": "qa/clone/cert-view.png vs qa/original/cert-view.png"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "证书文件名两位补零（assets/certs 共 8 张）",
+      "status": "PASS",
+      "detail": "文件名规则 `广工杯<年>_rk<两位排名>_<队名>.png`，与 README 一致；FOUND 查询经 HEAD 探测命中后提示「证书已开始下载」",
+      "evidence": "assets/certs/"
+    },
+    {
+      "category": "G 有意差异",
+      "item": "ENTER 占位链接 \"#\" 时不跳转（静态 + 运行时验证）",
+      "status": "PASS",
+      "detail": "CONFIG.enterUrl 为占位 \"#\" 时脚本 preventDefault；运行时点击后 location.href 保持不变",
+      "evidence": "script.js；qa/clone-extra/_enter-link-diagnostics.json"
+    },
+    {
+      "category": "H 像素",
+      "item": "ENTER 静止态",
+      "status": "PASS",
+      "detail": "区域 470x140：平均通道差 0.2365，>8 差异像素 0.0%",
+      "evidence": "qa/original/home-1800ms.png vs qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "ENTER hover 态（白底黑字+辉光）",
+      "status": "PASS",
+      "detail": "区域 530x220：平均通道差 0.1607，>8 差异像素 0.0%",
+      "evidence": "qa/original/home-hover-enter.png vs qa/clone/home-hover-enter.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "CERTIFICATE 大按钮静止态",
+      "status": "PASS",
+      "detail": "区域 650x95：平均通道差 0.257，>8 差异像素 0.0%",
+      "evidence": "qa/original/home-1800ms.png vs qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "CERTIFICATE 大按钮 hover 态",
+      "status": "PASS",
+      "detail": "区域 690x135：平均通道差 0.3269，>8 差异像素 0.0%",
+      "evidence": "qa/original/home-hover-cert-btn.png vs qa/clone/home-hover-cert-btn.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "顶栏按钮静止态",
+      "status": "PASS",
+      "detail": "区域 330x60：平均通道差 0.0983，>8 差异像素 0.0%",
+      "evidence": "qa/original/home-1800ms.png vs qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "顶栏括号 hover 态",
+      "status": "PASS",
+      "detail": "区域 330x60：平均通道差 0.0985，>8 差异像素 0.0%",
+      "evidence": "qa/original/header-hover-home.png vs qa/clone/header-hover-home.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "Tab 导航条（文字+下划线）",
+      "status": "PASS",
+      "detail": "区域 900x79：平均通道差 0.3094，>8 差异像素 0.0%",
+      "evidence": "qa/original/tab-sponsors.png vs qa/clone/tab-sponsors.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "LEADERBOARD 标题",
+      "status": "PASS",
+      "detail": "区域 850x75：平均通道差 0.2979，>8 差异像素 0.0%",
+      "evidence": "qa/original/tab-leaderboard.png vs qa/clone/tab-leaderboard.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "赞助卡上边框",
+      "status": "PASS",
+      "detail": "区域 268x2：平均通道差 0.1455，>8 差异像素 0.0%",
+      "evidence": "qa/original/tab-sponsors.png vs qa/clone/tab-sponsors.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "赞助卡左边框",
+      "status": "PASS",
+      "detail": "区域 2x120：平均通道差 0.0542，>8 差异像素 0.0%",
+      "evidence": "qa/original/tab-sponsors.png vs qa/clone/tab-sponsors.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "表格表头（列宽由内容决定）",
+      "status": "INFO",
+      "detail": "原站/复刻站演示数据队伍名宽度不同，table-layout:auto 列宽随内容变化，表头文字水平位置随之偏移；字体与样式一致（实测平均通道差 1.2289，>8 差异像素 1.22748%）",
+      "evidence": "qa/original/tab-leaderboard.png vs qa/clone/tab-leaderboard.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "证书页（有意修复：标题恢复显示）",
+      "status": "INFO",
+      "detail": "原站 openCertView 读取 innerText 时机 bug 导致大标题空白；复刻站修复后标题正常显示并解码，证书页内容整体高 54px、垂直居中位移 27px（表单 x/宽不变），属有意差异；标题解码与表单布局另见 D 类检查（实测平均通道差 7.9237，>8 差异像素 7.45804%）",
+      "evidence": "qa/original/cert-view.png vs qa/clone/cert-view.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "首页静止态整帧（掩掉品牌/装饰文字/年份等有意差异区）",
+      "status": "PASS",
+      "detail": "比较像素 1186750 个，>8 差异像素 0 个（0.00000%）→ 布局/按钮/分割线与原站逐像素一致",
+      "evidence": "qa/original/home-1800ms.png vs qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "file:// 首页（file:// vs http:// 同帧）",
+      "status": "PASS",
+      "detail": "整帧比较：平均通道差 0.0，>8 差异像素 0.0% → file:// 渲染与本地服务完全等价",
+      "evidence": "qa/clone-file/file-home.png vs qa/clone/home-1800ms.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "file:// 数据页（file:// vs http:// 同帧）",
+      "status": "PASS",
+      "detail": "整帧比较：平均通道差 0.0，>8 差异像素 0.0% → file:// 渲染与本地服务完全等价",
+      "evidence": "qa/clone-file/file-data.png vs qa/clone/data-2025.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "file:// 赞助页（file:// vs http:// 同帧）",
+      "status": "PASS",
+      "detail": "整帧比较：平均通道差 0.0，>8 差异像素 0.0% → file:// 渲染与本地服务完全等价",
+      "evidence": "qa/clone-file/file-tab-sponsors.png vs qa/clone/tab-sponsors.png"
+    },
+    {
+      "category": "H 像素",
+      "item": "file:// 证书页（掩掉顶栏 hover 差异）",
+      "status": "PASS",
+      "detail": ">8 差异像素 0/1275600 = 0.00000%",
+      "evidence": "qa/clone-file/file-cert.png vs qa/clone/cert-view.png"
+    },
+    {
+      "category": "B 布局（移动端）",
+      "item": "375x812 关键元素矩形",
+      "status": "PASS",
+      "detail": "header 60 / sidebar 120 / tabNav 255 / ENTER 412x116@(42,308) / panel 255 宽等与原站逐一一致（±2px）；原站移动端 tab 溢出被裁剪、ENTER 超出视口被裁的现象按原 CSS 保留，与原站一致",
+      "evidence": "qa/baseline-original-mobile.json vs qa/baseline-clone-mobile.json"
+    }
+  ]
+}

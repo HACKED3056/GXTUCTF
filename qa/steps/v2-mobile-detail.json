@@ -1,0 +1,17 @@
+{
+  "label": "mobile-detail",
+  "url": "http://127.0.0.1:8801/index.html",
+  "width": 375,
+  "height": 812,
+  "mobile": true,
+  "steps": [
+    { "wait": 1400 },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 800 },
+    { "shot": "mobile-detail-top.png" },
+    { "eval": "(() => { const w = document.querySelector('.table-wrapper'); return JSON.stringify({ wrapperScrollW: w.scrollWidth, wrapperClientW: w.clientWidth, tableScrolls: w.scrollWidth > w.clientWidth, bodyOverflow: document.body.scrollWidth > window.innerWidth, innerW: window.innerWidth, innerH: window.innerHeight }); })()" },
+    { "eval": "document.querySelector('.panel-container').scrollTop = 100000; true" },
+    { "wait": 400 },
+    { "shot": "mobile-detail-bottom.png" }
+  ]
+}

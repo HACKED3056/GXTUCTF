@@ -1,0 +1,11 @@
+{
+  "label": "clone-enter-link",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 800 },
+    { "eval": "JSON.stringify({ before: location.href, enterHref: document.querySelector('.main-enter-btn').getAttribute('href'), target: document.querySelector('.main-enter-btn').getAttribute('target') })" },
+    { "eval": "document.querySelector('.main-enter-btn').click(); true" },
+    { "wait": 400 },
+    { "eval": "JSON.stringify({ after: location.href, same: location.href === 'http://127.0.0.1:8801/index.html' })" }
+  ]
+}

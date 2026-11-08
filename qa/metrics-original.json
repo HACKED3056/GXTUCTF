@@ -1,0 +1,105 @@
+{
+  "tool": "qa/shoot.mjs",
+  "label": "metrics-original",
+  "url": "https://www.ctf.vin/",
+  "finalUrl": "https://www.ctf.vin/",
+  "stepsFile": "C:\\Users\\HACKED\\Desktop\\广工杯\\qa\\steps\\metrics-probe.json",
+  "chrome": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+  "viewport": {
+    "width": 1440,
+    "height": 900,
+    "mobile": false
+  },
+  "startedAt": "2026-11-08T06:28:00.271Z",
+  "chromePort": 53534,
+  "browser": "Chrome/156.0.8078.81",
+  "protocolVersion": "1.3",
+  "nav": {
+    "requestedUrl": "https://www.ctf.vin/",
+    "finalUrl": "https://www.ctf.vin/",
+    "loadMs": 1231,
+    "domContentLoadedMs": 989,
+    "loadTimedOut": false
+  },
+  "shots": [],
+  "console": [],
+  "exceptions": [],
+  "logEntries": [
+    {
+      "level": "error",
+      "source": "network",
+      "text": "Failed to load resource: the server responded with a status of 404 ()",
+      "url": "https://www.ctf.vin/favicon.ico"
+    }
+  ],
+  "networkErrors": [
+    {
+      "url": "https://www.ctf.vin/favicon.ico",
+      "status": 404,
+      "statusText": "",
+      "type": "Other",
+      "mimeType": "text/plain"
+    }
+  ],
+  "failedRequests": [],
+  "stepFailures": [],
+  "evals": [
+    {
+      "index": 1,
+      "expression": "(() => { const r = (s) => { const el = document.querySelector(s); if (!el) return null; const b = el.getBoundingClientRect(); return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }; }; const cs = (s) => { const el = document.querySelector(s); return el ? getComputedStyle(el) : null; }; const g = cs('.sponsor-grid'); return JSON.stringify({ title: document.title, infoCard: r('.info-card'), panelScrollTop: (document.querySelector('.panel-container')||{}).scrollTop, sponsorGrid: g ? { display: g.display, gridTemplateColumns: g.gridTemplateColumns, gap: g.gap } : null }); })()",
+      "result": "\"{\\\"title\\\":\\\"MilkDragonCTF // 奶龙杯\\\",\\\"infoCard\\\":{\\\"x\\\":200,\\\"y\\\":303,\\\"w\\\":1160,\\\"h\\\":124},\\\"panelScrollTop\\\":0,\\\"sponsorGrid\\\":{\\\"display\\\":\\\"grid\\\",\\\"gridTemplateColumns\\\":\\\"repeat(auto-fill, minmax(250px, 1fr))\\\",\\\"gap\\\":\\\"30px\\\"}}\""
+    },
+    {
+      "index": 2,
+      "expression": "document.querySelector('.year-item').click(); true",
+      "result": "true"
+    },
+    {
+      "index": 4,
+      "expression": "document.querySelectorAll('.tab-btn')[1].click(); true",
+      "result": "true"
+    },
+    {
+      "index": 6,
+      "expression": "(() => { const t = document.querySelector('.minimal-table'); const th = t.querySelector('th'); const td = t.querySelector('tbody td'); const b = (e) => { const r = e.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }; const c = (e) => getComputedStyle(e); return JSON.stringify({ table: b(t), thead: b(t.querySelector('thead')), tbody: b(t.querySelector('tbody')), th: { h: b(th).h, lineHeight: c(th).lineHeight, fontSize: c(th).fontSize, padding: c(th).padding, letterSpacing: c(th).letterSpacing }, td: { h: b(td).h, lineHeight: c(td).lineHeight, fontSize: c(td).fontSize, padding: c(td).padding }, rowCount: t.querySelectorAll('tbody tr').length, rowHeights: [...t.querySelectorAll('tbody tr')].map(r => Math.round(r.getBoundingClientRect().height)) }); })()",
+      "result": "\"{\\\"table\\\":{\\\"x\\\":200,\\\"y\\\":303,\\\"w\\\":1160,\\\"h\\\":444},\\\"thead\\\":{\\\"x\\\":200,\\\"y\\\":303,\\\"w\\\":1160,\\\"h\\\":67},\\\"tbody\\\":{\\\"x\\\":200,\\\"y\\\":370,\\\"w\\\":1160,\\\"h\\\":377},\\\"th\\\":{\\\"h\\\":67,\\\"lineHeight\\\":\\\"normal\\\",\\\"fontSize\\\":\\\"14.4px\\\",\\\"padding\\\":\\\"25px\\\",\\\"letterSpacing\\\":\\\"2px\\\"},\\\"td\\\":{\\\"h\\\":79,\\\"lineHeight\\\":\\\"normal\\\",\\\"fontSize\\\":\\\"19.2px\\\",\\\"padding\\\":\\\"25px\\\"},\\\"rowCount\\\":5,\\\"rowHeights\\\":[79,73,79,73,73]}\""
+    },
+    {
+      "index": 7,
+      "expression": "document.querySelectorAll('.tab-btn')[2].click(); true",
+      "result": "true"
+    },
+    {
+      "index": 9,
+      "expression": "(() => { const g = document.querySelector('.sponsor-grid'); const gs = getComputedStyle(g); const cards = [...document.querySelectorAll('.sponsor-card')].map(c => { const r = c.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }); const linkRects = [...document.querySelectorAll('.sponsor-link')].map(a => { const r = a.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }); return JSON.stringify({ gridStyle: { display: gs.display, gridTemplateColumns: gs.gridTemplateColumns, gap: gs.gap }, cardCount: cards.length, cards, linkRects }); })()",
+      "result": "\"{\\\"gridStyle\\\":{\\\"display\\\":\\\"grid\\\",\\\"gridTemplateColumns\\\":\\\"267.5px 267.5px 267.5px 267.5px\\\",\\\"gap\\\":\\\"30px\\\"},\\\"cardCount\\\":7,\\\"cards\\\":[{\\\"x\\\":200,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":498,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":795,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":1093,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":200,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":498,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":795,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120}],\\\"linkRects\\\":[{\\\"x\\\":200,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":498,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":795,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":1093,\\\"y\\\":303,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":200,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":498,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120},{\\\"x\\\":795,\\\"y\\\":453,\\\"w\\\":268,\\\"h\\\":120}]}\""
+    },
+    {
+      "index": 10,
+      "expression": "window.openCertView(); true",
+      "result": "true"
+    },
+    {
+      "index": 12,
+      "expression": "(() => { const r = (s) => { const el = document.querySelector(s); if (!el) return null; const b = el.getBoundingClientRect(); return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }; }; const cs = (s) => { const el = document.querySelector(s); return el ? getComputedStyle(el) : null; }; const t = document.querySelector('#cert-view .section-title'); const sub = document.querySelector('.cert-sub'); return JSON.stringify({ title: r('#cert-view .section-title'), titleStyle: t ? { fontSize: getComputedStyle(t).fontSize, letterSpacing: getComputedStyle(t).letterSpacing, fontWeight: getComputedStyle(t).fontWeight, color: getComputedStyle(t).color } : null, sub: r('.cert-sub'), subStyle: sub ? { fontSize: getComputedStyle(sub).fontSize, letterSpacing: getComputedStyle(sub).letterSpacing, color: getComputedStyle(sub).color } : null, inner: r('.cert-inner'), yearList: r('.cert-year-list'), yearBtn: r('.cert-year-btn'), input: r('#cert-name-input'), download: r('.cert-download-btn') }); })()",
+      "result": "\"{\\\"title\\\":{\\\"x\\\":320,\\\"y\\\":372,\\\"w\\\":920,\\\"h\\\":0},\\\"titleStyle\\\":{\\\"fontSize\\\":\\\"48px\\\",\\\"letterSpacing\\\":\\\"6px\\\",\\\"fontWeight\\\":\\\"700\\\",\\\"color\\\":\\\"rgb(255, 255, 255)\\\"},\\\"sub\\\":{\\\"x\\\":320,\\\"y\\\":372,\\\"w\\\":920,\\\"h\\\":21},\\\"subStyle\\\":{\\\"fontSize\\\":\\\"14.4px\\\",\\\"letterSpacing\\\":\\\"3px\\\",\\\"color\\\":\\\"rgb(170, 170, 170)\\\"},\\\"inner\\\":{\\\"x\\\":280,\\\"y\\\":292,\\\"w\\\":1000,\\\"h\\\":376},\\\"yearList\\\":{\\\"x\\\":320,\\\"y\\\":443,\\\"w\\\":920,\\\"h\\\":43},\\\"yearBtn\\\":{\\\"x\\\":320,\\\"y\\\":443,\\\"w\\\":195,\\\"h\\\":43},\\\"input\\\":{\\\"x\\\":320,\\\"y\\\":506,\\\"w\\\":725,\\\"h\\\":52},\\\"download\\\":{\\\"x\\\":1065,\\\"y\\\":506,\\\"w\\\":175,\\\"h\\\":52}}\""
+    },
+    {
+      "index": 13,
+      "expression": "document.querySelector('#cert-name-input').value = '不存在的队伍XYZ'; document.querySelector('.cert-download-btn').click(); true",
+      "result": "true"
+    },
+    {
+      "index": 15,
+      "expression": "(() => { const el = document.querySelector('.cert-notfound'); if (!el) return JSON.stringify({ found: false }); const b = el.getBoundingClientRect(); const c = getComputedStyle(el); return JSON.stringify({ found: true, rect: { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }, style: { padding: c.padding, letterSpacing: c.letterSpacing, fontSize: c.fontSize, lineHeight: c.lineHeight, border: c.border, background: c.backgroundColor, color: c.color }, text: el.innerText.slice(0, 120) }); })()",
+      "result": "\"{\\\"found\\\":true,\\\"rect\\\":{\\\"x\\\":320,\\\"y\\\":529,\\\"w\\\":920,\\\"h\\\":157},\\\"style\\\":{\\\"padding\\\":\\\"60px\\\",\\\"letterSpacing\\\":\\\"4px\\\",\\\"fontSize\\\":\\\"17.6px\\\",\\\"lineHeight\\\":\\\"35.2px\\\",\\\"border\\\":\\\"1px dashed rgba(255, 255, 255, 0.1)\\\",\\\"background\\\":\\\"rgba(255, 255, 255, 0.03)\\\",\\\"color\\\":\\\"rgb(170, 170, 170)\\\"},\\\"text\\\":\\\"NOT FOUND // 未查询到「不存在的队伍XYZ」在 所有年度 的证书\\\"}\""
+    }
+  ],
+  "finishedAt": "2026-11-08T06:28:06.239Z",
+  "finalViewport": {
+    "width": 1440,
+    "height": 900,
+    "mobile": false
+  },
+  "chromeStderrTail": "\r\nDevTools listening on ws://127.0.0.1:53534/devtools/browser/c3a079ed-4fa1-4d1e-96b7-27becd0e3b35\r\n"
+}

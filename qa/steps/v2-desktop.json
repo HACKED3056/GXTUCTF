@@ -1,0 +1,30 @@
+{
+  "label": "clone-v2-desktop",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 0 },
+    { "shot": "home-000ms.png" },
+    { "wait": 150 },
+    { "shot": "home-150ms.png" },
+    { "wait": 450 },
+    { "shot": "home-600ms.png" },
+    { "wait": 1200 },
+    { "shot": "home-1800ms.png" },
+    { "hover": ".main-enter-btn" },
+    { "wait": 400 },
+    { "shot": "home-hover-enter.png" },
+    { "hover": ".brand-title" },
+    { "wait": 700 },
+    { "click": ".year-item" },
+    { "shot": "view-fade-1.png" },
+    { "shot": "view-fade-2.png" },
+    { "wait": 700 },
+    { "shot": "data-2026.png" },
+    { "click": ".tab-btn:nth-child(2)" },
+    { "wait": 700 },
+    { "shot": "tab-leaderboard.png" },
+    { "hover": ".header-actions .home-icon-btn" },
+    { "wait": 400 },
+    { "shot": "header-hover-home.png" }
+  ]
+}

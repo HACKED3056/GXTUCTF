@@ -1,0 +1,14 @@
+{
+  "label": "detail-rich",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 1500 },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const d = document.getElementById('detail-text'); return JSON.stringify({ h4Count: d.querySelectorAll('h4').length, h4Texts: Array.from(d.querySelectorAll('h4')).map(h => h.innerText), h5Count: d.querySelectorAll('h5').length, liCount: d.querySelectorAll('li').length, tableRows: d.querySelectorAll('tbody tr').length, thTexts: Array.from(d.querySelectorAll('th')).map(t => t.innerText), mailto: (d.querySelector('a[href^=\"mailto:\"]')||{}).href || null, overflowX: d.scrollWidth > d.clientWidth, bodyScrollHeight: document.querySelector('.panel-container').scrollHeight, clientHeight: document.querySelector('.panel-container').clientHeight }); })()" },
+    { "shot": "detail-top.png" },
+    { "eval": "document.querySelector('.panel-container').scrollTop = 100000; true" },
+    { "wait": 400 },
+    { "shot": "detail-bottom.png" }
+  ]
+}

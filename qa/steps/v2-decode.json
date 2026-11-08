@@ -1,0 +1,17 @@
+{
+  "label": "clone-v2-decode",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 1500 },
+    { "eval": "document.dispatchEvent(new Event('DOMContentLoaded')); window.__qaDecodeT0 = performance.now(); 'decode-retriggered'" },
+    { "shot": "decode-000ms.png" },
+    { "wait": 80 },
+    { "shot": "decode-080ms.png" },
+    { "wait": 120 },
+    { "shot": "decode-200ms.png" },
+    { "wait": 200 },
+    { "shot": "decode-400ms.png" },
+    { "wait": 400 },
+    { "shot": "decode-800ms.png" }
+  ]
+}

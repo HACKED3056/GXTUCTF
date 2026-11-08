@@ -1,0 +1,27 @@
+{
+  "label": "clone-v2-file",
+  "url": "file:///C:/Users/HACKED/Desktop/%E5%B9%BF%E5%B7%A5%E6%9D%AF/index.html",
+  "steps": [
+    {
+      "wait": 2000
+    },
+    {
+      "eval": "(() => JSON.stringify({ phase: 'file-home', href: location.href, readyState: document.readyState, fontCheck: document.fonts.check('16px \"Share Tech Mono\"'), fontsStatus: document.fonts.status, loadedFonts: Array.from(document.fonts).filter(f => f.status === 'loaded').map(f => f.family), scripts: Array.from(document.scripts).map(s => s.src), stylesheets: Array.from(document.styleSheets).map(s => s.href), certViewExists: !!document.getElementById('cert-view'), certElementCount: document.querySelectorAll('.cert-enter-btn, #cert-view, [class*=\"cert\"], [id*=\"cert\"]').length, sponsorElementCount: document.querySelectorAll('#sponsor-container, .sponsor-grid, .sponsor-card').length, homeIconBtnCount: document.querySelectorAll('.home-icon-btn').length, tabBtnTexts: Array.from(document.querySelectorAll('.tab-btn')).map(b => b.textContent.trim()), yearItems: Array.from(document.querySelectorAll('.year-item')).map(el => el.innerText.trim()), brandText: document.querySelector('.brand-title').innerText, bodyHasGDUT: document.body.innerText.includes('GDUT'), bodyHasGXUTCTF: document.body.innerText.includes('GXUTCTF') }))()"
+    },
+    {
+      "shot": "file-home.png"
+    },
+    {
+      "eval": "document.querySelector('.year-item').click(); true"
+    },
+    {
+      "wait": 900
+    },
+    {
+      "eval": "(() => JSON.stringify({ phase: 'file-data', activeView: (document.querySelector('.view.active') || {}).id || null, detailTitle: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, rankRows: document.querySelectorAll('#rank-tbody tr').length }))()"
+    },
+    {
+      "shot": "file-data.png"
+    }
+  ]
+}

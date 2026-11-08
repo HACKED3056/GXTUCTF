@@ -1,0 +1,59 @@
+{
+  "dirs": [
+    "original-mobile"
+  ],
+  "width": 375,
+  "height": 812,
+  "total": 3,
+  "passed": 3,
+  "results": [
+    {
+      "file": "original-mobile\\mobile-data.png",
+      "name": "mobile-data.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 375,
+      "height": 812,
+      "bright_ratio": 0.005631,
+      "dark_ratio": 0.970655,
+      "mean_luma": 16.02,
+      "std_luma": 23.35,
+      "unique_colors": 254,
+      "sampled_pixels": 106560,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "file": "original-mobile\\mobile-home.png",
+      "name": "mobile-home.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 375,
+      "height": 812,
+      "bright_ratio": 0.011759,
+      "dark_ratio": 0.961449,
+      "mean_luma": 16.62,
+      "std_luma": 31.39,
+      "unique_colors": 242,
+      "sampled_pixels": 106560,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "file": "original-mobile\\mobile-sponsors.png",
+      "name": "mobile-sponsors.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 375,
+      "height": 812,
+      "bright_ratio": 0.00732,
+      "dark_ratio": 0.975047,
+      "mean_luma": 17.57,
+      "std_luma": 23.96,
+      "unique_colors": 256,
+      "sampled_pixels": 106560,
+      "passed": true,
+      "reasons": []
+    }
+  ]
+}

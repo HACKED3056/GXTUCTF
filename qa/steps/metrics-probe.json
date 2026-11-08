@@ -1,0 +1,22 @@
+{
+  "label": "metrics-probe",
+  "url": "https://www.ctf.vin/",
+  "steps": [
+    { "wait": 800 },
+    { "eval": "(() => { const r = (s) => { const el = document.querySelector(s); if (!el) return null; const b = el.getBoundingClientRect(); return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }; }; const cs = (s) => { const el = document.querySelector(s); return el ? getComputedStyle(el) : null; }; const g = cs('.sponsor-grid'); return JSON.stringify({ title: document.title, infoCard: r('.info-card'), panelScrollTop: (document.querySelector('.panel-container')||{}).scrollTop, sponsorGrid: g ? { display: g.display, gridTemplateColumns: g.gridTemplateColumns, gap: g.gap } : null }); })()" },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "eval": "document.querySelectorAll('.tab-btn')[1].click(); true" },
+    { "wait": 700 },
+    { "eval": "(() => { const t = document.querySelector('.minimal-table'); const th = t.querySelector('th'); const td = t.querySelector('tbody td'); const b = (e) => { const r = e.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }; const c = (e) => getComputedStyle(e); return JSON.stringify({ table: b(t), thead: b(t.querySelector('thead')), tbody: b(t.querySelector('tbody')), th: { h: b(th).h, lineHeight: c(th).lineHeight, fontSize: c(th).fontSize, padding: c(th).padding, letterSpacing: c(th).letterSpacing }, td: { h: b(td).h, lineHeight: c(td).lineHeight, fontSize: c(td).fontSize, padding: c(td).padding }, rowCount: t.querySelectorAll('tbody tr').length, rowHeights: [...t.querySelectorAll('tbody tr')].map(r => Math.round(r.getBoundingClientRect().height)) }); })()" },
+    { "eval": "document.querySelectorAll('.tab-btn')[2].click(); true" },
+    { "wait": 700 },
+    { "eval": "(() => { const g = document.querySelector('.sponsor-grid'); const gs = getComputedStyle(g); const cards = [...document.querySelectorAll('.sponsor-card')].map(c => { const r = c.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }); const linkRects = [...document.querySelectorAll('.sponsor-link')].map(a => { const r = a.getBoundingClientRect(); return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) }; }); return JSON.stringify({ gridStyle: { display: gs.display, gridTemplateColumns: gs.gridTemplateColumns, gap: gs.gap }, cardCount: cards.length, cards, linkRects }); })()" },
+    { "eval": "window.openCertView(); true" },
+    { "wait": 800 },
+    { "eval": "(() => { const r = (s) => { const el = document.querySelector(s); if (!el) return null; const b = el.getBoundingClientRect(); return { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }; }; const cs = (s) => { const el = document.querySelector(s); return el ? getComputedStyle(el) : null; }; const t = document.querySelector('#cert-view .section-title'); const sub = document.querySelector('.cert-sub'); return JSON.stringify({ title: r('#cert-view .section-title'), titleStyle: t ? { fontSize: getComputedStyle(t).fontSize, letterSpacing: getComputedStyle(t).letterSpacing, fontWeight: getComputedStyle(t).fontWeight, color: getComputedStyle(t).color } : null, sub: r('.cert-sub'), subStyle: sub ? { fontSize: getComputedStyle(sub).fontSize, letterSpacing: getComputedStyle(sub).letterSpacing, color: getComputedStyle(sub).color } : null, inner: r('.cert-inner'), yearList: r('.cert-year-list'), yearBtn: r('.cert-year-btn'), input: r('#cert-name-input'), download: r('.cert-download-btn') }); })()" },
+    { "eval": "document.querySelector('#cert-name-input').value = '不存在的队伍XYZ'; document.querySelector('.cert-download-btn').click(); true" },
+    { "wait": 300 },
+    { "eval": "(() => { const el = document.querySelector('.cert-notfound'); if (!el) return JSON.stringify({ found: false }); const b = el.getBoundingClientRect(); const c = getComputedStyle(el); return JSON.stringify({ found: true, rect: { x: Math.round(b.x), y: Math.round(b.y), w: Math.round(b.width), h: Math.round(b.height) }, style: { padding: c.padding, letterSpacing: c.letterSpacing, fontSize: c.fontSize, lineHeight: c.lineHeight, border: c.border, background: c.backgroundColor, color: c.color }, text: el.innerText.slice(0, 120) }); })()" }
+  ]
+}

@@ -1,0 +1,1266 @@
+{
+  "label": "clone-mobile",
+  "generatedAt": "2026-11-08T14:34:19+08:00",
+  "sites": [
+    "http://127.0.0.1:8801/index.html"
+  ],
+  "chrome": "Chrome/156.0.8078.81",
+  "protocolVersion": "1.3",
+  "viewports": [
+    {
+      "width": 375,
+      "height": 812,
+      "mobile": true
+    }
+  ],
+  "nav": {
+    "requestedUrl": "http://127.0.0.1:8801/index.html",
+    "finalUrl": "http://127.0.0.1:8801/index.html",
+    "loadMs": 84,
+    "domContentLoadedMs": 75,
+    "loadTimedOut": false
+  },
+  "fonts": {
+    "status": "loaded",
+    "loaded": [
+      "Share Tech Mono 400"
+    ]
+  },
+  "shots": {
+    "mobile-home.png": {
+      "width": 375,
+      "height": 812,
+      "bytes": 38608,
+      "expectedWidth": 375,
+      "expectedHeight": 812,
+      "msSinceNav": 1902,
+      "msSinceLoad": 1818,
+      "probeMs": 3,
+      "captureMs": 31,
+      "probe": {
+        "readyState": "complete",
+        "href": "http://127.0.0.1:8801/index.html",
+        "viewport": {
+          "w": 375,
+          "h": 812,
+          "dpr": 1,
+          "scrollY": 0
+        },
+        "views": {
+          "home-view": {
+            "active": true,
+            "opacity": "1",
+            "visibility": "visible"
+          },
+          "data-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          },
+          "cert-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          }
+        },
+        "activeView": "home-view",
+        "rects": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "brand": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "sidebar": {
+            "x": 0,
+            "y": 60,
+            "w": 120,
+            "h": 752
+          },
+          "contentArea": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 752
+          },
+          "tabNav": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 79
+          },
+          "enterBtn": {
+            "x": 42,
+            "y": 308,
+            "w": 412,
+            "h": 116
+          },
+          "certEnterBtn": {
+            "x": 87,
+            "y": 452,
+            "w": 322,
+            "h": 52
+          },
+          "centerContent": {
+            "x": 120,
+            "y": 0,
+            "w": 255,
+            "h": 812
+          },
+          "panel": {
+            "x": 120,
+            "y": 139,
+            "w": 255,
+            "h": 673
+          },
+          "sectionTitle": {
+            "x": 160,
+            "y": 179,
+            "w": 175,
+            "h": 72
+          },
+          "sponsorCard": null,
+          "minimalTable": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "certInner": {
+            "x": 120,
+            "y": 222,
+            "w": 255,
+            "h": 429
+          },
+          "certInput": {
+            "x": 140,
+            "y": 437,
+            "w": 215,
+            "h": 52
+          },
+          "certDownloadBtn": {
+            "x": 140,
+            "y": 509,
+            "w": 215,
+            "h": 52
+          }
+        },
+        "styles": {
+          "body": {
+            "background-color": "rgb(0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-family": "\"Share Tech Mono\", \"Noto Sans SC\", \"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans SC\", sans-serif",
+            "font-size": "16px",
+            "letter-spacing": "normal"
+          },
+          "htmlFontSize": "16px",
+          "header": {
+            "height": "60px",
+            "background-color": "rgba(255, 255, 255, 0.03)",
+            "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
+            "display": "flex",
+            "padding": "0px 16px"
+          },
+          "brand": {
+            "font-size": "19.2px",
+            "letter-spacing": "4px",
+            "font-weight": "700",
+            "color": "rgb(255, 255, 255)"
+          },
+          "sidebar": {
+            "width": "120px",
+            "padding": "0px",
+            "border-right": "1px solid rgba(255, 255, 255, 0.1)"
+          },
+          "yearItem": {
+            "font-size": "17.6px",
+            "letter-spacing": "2px",
+            "padding": "25px 0px",
+            "color": "rgb(170, 170, 170)",
+            "border-right": "0px none rgb(170, 170, 170)"
+          },
+          "enterBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-size": "64px",
+            "font-weight": "900",
+            "letter-spacing": "15px",
+            "padding": "20px 80px",
+            "transform": "none",
+            "box-shadow": "none",
+            "clip-path": "polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%)",
+            "border": "2px solid rgb(255, 255, 255)",
+            "min-width": "400px",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "certBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(170, 170, 170)",
+            "font-size": "16px",
+            "letter-spacing": "4px",
+            "padding": "12px 24px",
+            "transform": "none",
+            "box-shadow": "none",
+            "border": "2px solid rgb(170, 170, 170)",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "tabBtnActive": {
+            "color": "rgb(255, 255, 255)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(255, 255, 255)"
+          },
+          "tabBtn": {
+            "color": "rgb(255, 255, 255)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(255, 255, 255)"
+          },
+          "sectionTitle": {
+            "font-size": "32px",
+            "letter-spacing": "6px",
+            "color": "rgb(255, 255, 255)",
+            "font-weight": "700"
+          },
+          "sponsorCard": null,
+          "detailText": {
+            "font-size": "20.8px",
+            "line-height": "41.6px",
+            "color": "rgb(170, 170, 170)",
+            "letter-spacing": "normal"
+          }
+        },
+        "scramble": {
+          "brand": {
+            "text": "GDUTCTF // 广工杯",
+            "chars": 12,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "enter": {
+            "text": "ENTER",
+            "chars": 5,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certEnter": {
+            "text": "CERTIFICATE // 证书查询",
+            "chars": 17,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "tabTitle": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certTitle": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          }
+        },
+        "headerBtns": [
+          {
+            "text": "HOME",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          },
+          {
+            "text": "CERTIFICATE",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          }
+        ],
+        "tabBtns": [
+          {
+            "text": "",
+            "active": true,
+            "color": "rgb(255, 255, 255)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(255, 255, 255)"
+          },
+          {
+            "text": "",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          }
+        ],
+        "activeTab": null,
+        "yearItems": [
+          "2026",
+          "2025"
+        ],
+        "activeYear": null,
+        "detailText": null,
+        "rankRows": 0,
+        "sponsorCount": 0,
+        "sponsorNames": [],
+        "enterHoverState": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "letterSpacing": "15px",
+          "transform": "none",
+          "boxShadow": "none"
+        },
+        "cert": {
+          "yearBtns": [],
+          "activeYear": null,
+          "inputValue": "",
+          "inputPlaceholder": "TEAM NAME // 队伍名称",
+          "resultText": null
+        },
+        "fonts": {
+          "status": "loaded",
+          "loaded": [
+            "Share Tech Mono 400"
+          ]
+        },
+        "decorRects": [
+          {
+            "cls": "home-decor decor-top-left",
+            "text": "SYSTEM_VERSION: GDUT_CTF_v1.0",
+            "x": 180,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-top-right",
+            "text": "NODE_STATUS: STABLE [OK]",
+            "x": 120,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-left",
+            "text": "LAT: 23.0444 | LON: 113.3918",
+            "x": 180,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-right",
+            "text": "GDUT_SAFE_LAB // ARCHIVE_INIT",
+            "x": 120,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-center-line",
+            "text": "",
+            "x": 120,
+            "y": 406,
+            "w": 255,
+            "h": 1
+          }
+        ],
+        "qaDecodeMs": null
+      }
+    },
+    "mobile-data.png": {
+      "width": 375,
+      "height": 812,
+      "bytes": 46793,
+      "expectedWidth": 375,
+      "expectedHeight": 812,
+      "msSinceNav": 2848,
+      "msSinceLoad": 2764,
+      "probeMs": 3,
+      "captureMs": 30,
+      "probe": {
+        "readyState": "complete",
+        "href": "http://127.0.0.1:8801/index.html",
+        "viewport": {
+          "w": 375,
+          "h": 812,
+          "dpr": 1,
+          "scrollY": 0
+        },
+        "views": {
+          "home-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          },
+          "data-view": {
+            "active": true,
+            "opacity": "1",
+            "visibility": "visible"
+          },
+          "cert-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          }
+        },
+        "activeView": "data-view",
+        "rects": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "brand": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "sidebar": {
+            "x": 0,
+            "y": 60,
+            "w": 120,
+            "h": 752
+          },
+          "contentArea": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 752
+          },
+          "tabNav": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 79
+          },
+          "enterBtn": {
+            "x": 42,
+            "y": 308,
+            "w": 412,
+            "h": 116
+          },
+          "certEnterBtn": {
+            "x": 87,
+            "y": 452,
+            "w": 322,
+            "h": 52
+          },
+          "centerContent": {
+            "x": 120,
+            "y": 0,
+            "w": 255,
+            "h": 812
+          },
+          "panel": {
+            "x": 120,
+            "y": 139,
+            "w": 255,
+            "h": 673
+          },
+          "sectionTitle": {
+            "x": 160,
+            "y": 179,
+            "w": 175,
+            "h": 72
+          },
+          "sponsorCard": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "minimalTable": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "certInner": {
+            "x": 120,
+            "y": 222,
+            "w": 255,
+            "h": 429
+          },
+          "certInput": {
+            "x": 140,
+            "y": 437,
+            "w": 215,
+            "h": 52
+          },
+          "certDownloadBtn": {
+            "x": 140,
+            "y": 509,
+            "w": 215,
+            "h": 52
+          }
+        },
+        "styles": {
+          "body": {
+            "background-color": "rgb(0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-family": "\"Share Tech Mono\", \"Noto Sans SC\", \"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans SC\", sans-serif",
+            "font-size": "16px",
+            "letter-spacing": "normal"
+          },
+          "htmlFontSize": "16px",
+          "header": {
+            "height": "60px",
+            "background-color": "rgba(255, 255, 255, 0.03)",
+            "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
+            "display": "flex",
+            "padding": "0px 16px"
+          },
+          "brand": {
+            "font-size": "19.2px",
+            "letter-spacing": "4px",
+            "font-weight": "700",
+            "color": "rgb(255, 255, 255)"
+          },
+          "sidebar": {
+            "width": "120px",
+            "padding": "0px",
+            "border-right": "1px solid rgba(255, 255, 255, 0.1)"
+          },
+          "yearItem": {
+            "font-size": "17.6px",
+            "letter-spacing": "2px",
+            "padding": "25px 0px",
+            "color": "rgb(255, 255, 255)",
+            "border-right": "2px solid rgb(255, 255, 255)"
+          },
+          "enterBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-size": "64px",
+            "font-weight": "900",
+            "letter-spacing": "15px",
+            "padding": "20px 80px",
+            "transform": "none",
+            "box-shadow": "none",
+            "clip-path": "polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%)",
+            "border": "2px solid rgb(255, 255, 255)",
+            "min-width": "400px",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "certBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(170, 170, 170)",
+            "font-size": "16px",
+            "letter-spacing": "4px",
+            "padding": "12px 24px",
+            "transform": "none",
+            "box-shadow": "none",
+            "border": "2px solid rgb(170, 170, 170)",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "tabBtnActive": {
+            "color": "rgb(255, 255, 255)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(255, 255, 255)"
+          },
+          "tabBtn": {
+            "color": "rgb(255, 255, 255)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(255, 255, 255)"
+          },
+          "sectionTitle": {
+            "font-size": "32px",
+            "letter-spacing": "6px",
+            "color": "rgb(255, 255, 255)",
+            "font-weight": "700"
+          },
+          "sponsorCard": {
+            "background-color": "rgba(255, 255, 255, 0.03)",
+            "border-color": "rgba(255, 255, 255, 0.1)",
+            "height": "120px",
+            "font-size": "17.6px",
+            "letter-spacing": "4px",
+            "padding": "20px"
+          },
+          "detailText": {
+            "font-size": "20.8px",
+            "line-height": "41.6px",
+            "color": "rgb(170, 170, 170)",
+            "letter-spacing": "normal"
+          }
+        },
+        "scramble": {
+          "brand": {
+            "text": "GDUTCTF // 广工杯",
+            "chars": 12,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "enter": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certEnter": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "tabTitle": {
+            "text": "2026 DETAIL",
+            "chars": 10,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certTitle": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          }
+        },
+        "headerBtns": [
+          {
+            "text": "HOME",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          },
+          {
+            "text": "CERTIFICATE",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          }
+        ],
+        "tabBtns": [
+          {
+            "text": "DETAIL",
+            "active": true,
+            "color": "rgb(255, 255, 255)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(255, 255, 255)"
+          },
+          {
+            "text": "LEADERBOARD",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "SPONSORS",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "ARCHIVES",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          }
+        ],
+        "activeTab": "DETAIL",
+        "yearItems": [
+          "2026",
+          "2025"
+        ],
+        "activeYear": "2026",
+        "detailText": "「广工杯」2026 网络安全竞赛 · 线上赛（演示数据）。本站为赛事归档页面，所有队伍、分数、赞助商均为占位内容，请在 script.js 的 DATABASE 中替换为真实数据。",
+        "rankRows": 5,
+        "sponsorCount": 5,
+        "sponsorNames": [
+          "广东工业大学",
+          "GDUT SecLab",
+          "广工开源社区",
+          "0xBlue",
+          "NightShift"
+        ],
+        "sponsorFirst": {
+          "borderColor": "rgba(255, 255, 255, 0.1)",
+          "background": "rgba(255, 255, 255, 0.03)",
+          "after": {
+            "opacity": "0",
+            "transform": "none",
+            "animation": "4s linear infinite rotateBorder",
+            "backgroundImage": "conic-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(255, 255, 255))"
+          }
+        },
+        "enterHoverState": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "letterSpacing": "15px",
+          "transform": "none",
+          "boxShadow": "none"
+        },
+        "cert": {
+          "yearBtns": [],
+          "activeYear": null,
+          "inputValue": "",
+          "inputPlaceholder": "TEAM NAME // 队伍名称",
+          "resultText": null
+        },
+        "fonts": {
+          "status": "loaded",
+          "loaded": [
+            "Share Tech Mono 400"
+          ]
+        },
+        "decorRects": [
+          {
+            "cls": "home-decor decor-top-left",
+            "text": "",
+            "x": 180,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-top-right",
+            "text": "",
+            "x": 120,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-left",
+            "text": "",
+            "x": 180,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-right",
+            "text": "",
+            "x": 120,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-center-line",
+            "text": "",
+            "x": 120,
+            "y": 406,
+            "w": 255,
+            "h": 1
+          }
+        ],
+        "qaDecodeMs": null
+      }
+    },
+    "mobile-sponsors.png": {
+      "width": 375,
+      "height": 812,
+      "bytes": 40958,
+      "expectedWidth": 375,
+      "expectedHeight": 812,
+      "msSinceNav": 3592,
+      "msSinceLoad": 3508,
+      "probeMs": 3,
+      "captureMs": 30,
+      "probe": {
+        "readyState": "complete",
+        "href": "http://127.0.0.1:8801/index.html",
+        "viewport": {
+          "w": 375,
+          "h": 812,
+          "dpr": 1,
+          "scrollY": 0
+        },
+        "views": {
+          "home-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          },
+          "data-view": {
+            "active": true,
+            "opacity": "1",
+            "visibility": "visible"
+          },
+          "cert-view": {
+            "active": false,
+            "opacity": "0",
+            "visibility": "hidden"
+          }
+        },
+        "activeView": "data-view",
+        "rects": {
+          "header": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "brand": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "sidebar": {
+            "x": 0,
+            "y": 60,
+            "w": 120,
+            "h": 752
+          },
+          "contentArea": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 752
+          },
+          "tabNav": {
+            "x": 120,
+            "y": 60,
+            "w": 255,
+            "h": 79
+          },
+          "enterBtn": {
+            "x": 42,
+            "y": 308,
+            "w": 412,
+            "h": 116
+          },
+          "certEnterBtn": {
+            "x": 87,
+            "y": 452,
+            "w": 322,
+            "h": 52
+          },
+          "centerContent": {
+            "x": 120,
+            "y": 0,
+            "w": 255,
+            "h": 812
+          },
+          "panel": {
+            "x": 120,
+            "y": 139,
+            "w": 255,
+            "h": 673
+          },
+          "sectionTitle": {
+            "x": 160,
+            "y": 179,
+            "w": 175,
+            "h": 36
+          },
+          "sponsorCard": {
+            "x": 160,
+            "y": 265,
+            "w": 250,
+            "h": 120
+          },
+          "minimalTable": {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0
+          },
+          "certInner": {
+            "x": 120,
+            "y": 222,
+            "w": 255,
+            "h": 429
+          },
+          "certInput": {
+            "x": 140,
+            "y": 437,
+            "w": 215,
+            "h": 52
+          },
+          "certDownloadBtn": {
+            "x": 140,
+            "y": 509,
+            "w": 215,
+            "h": 52
+          }
+        },
+        "styles": {
+          "body": {
+            "background-color": "rgb(0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-family": "\"Share Tech Mono\", \"Noto Sans SC\", \"Microsoft YaHei\", \"PingFang SC\", \"Hiragino Sans GB\", \"Source Han Sans SC\", sans-serif",
+            "font-size": "16px",
+            "letter-spacing": "normal"
+          },
+          "htmlFontSize": "16px",
+          "header": {
+            "height": "60px",
+            "background-color": "rgba(255, 255, 255, 0.03)",
+            "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
+            "display": "flex",
+            "padding": "0px 16px"
+          },
+          "brand": {
+            "font-size": "19.2px",
+            "letter-spacing": "4px",
+            "font-weight": "700",
+            "color": "rgb(255, 255, 255)"
+          },
+          "sidebar": {
+            "width": "120px",
+            "padding": "0px",
+            "border-right": "1px solid rgba(255, 255, 255, 0.1)"
+          },
+          "yearItem": {
+            "font-size": "17.6px",
+            "letter-spacing": "2px",
+            "padding": "25px 0px",
+            "color": "rgb(255, 255, 255)",
+            "border-right": "2px solid rgb(255, 255, 255)"
+          },
+          "enterBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(255, 255, 255)",
+            "font-size": "64px",
+            "font-weight": "900",
+            "letter-spacing": "15px",
+            "padding": "20px 80px",
+            "transform": "none",
+            "box-shadow": "none",
+            "clip-path": "polygon(20px 0%, 100% 0%, calc(100% - 20px) 100%, 0% 100%)",
+            "border": "2px solid rgb(255, 255, 255)",
+            "min-width": "400px",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "certBtn": {
+            "background-color": "rgba(0, 0, 0, 0)",
+            "color": "rgb(170, 170, 170)",
+            "font-size": "16px",
+            "letter-spacing": "4px",
+            "padding": "12px 24px",
+            "transform": "none",
+            "box-shadow": "none",
+            "border": "2px solid rgb(170, 170, 170)",
+            "transition": "0.3s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "tabBtnActive": {
+            "color": "rgb(255, 255, 255)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(255, 255, 255)"
+          },
+          "tabBtn": {
+            "color": "rgb(170, 170, 170)",
+            "letter-spacing": "3px",
+            "font-size": "16px",
+            "border-bottom": "0px none rgb(170, 170, 170)"
+          },
+          "sectionTitle": {
+            "font-size": "32px",
+            "letter-spacing": "6px",
+            "color": "rgb(255, 255, 255)",
+            "font-weight": "700"
+          },
+          "sponsorCard": {
+            "background-color": "rgba(255, 255, 255, 0.03)",
+            "border-color": "rgba(255, 255, 255, 0.1)",
+            "height": "120px",
+            "font-size": "17.6px",
+            "letter-spacing": "4px",
+            "padding": "20px"
+          },
+          "detailText": {
+            "font-size": "20.8px",
+            "line-height": "41.6px",
+            "color": "rgb(170, 170, 170)",
+            "letter-spacing": "normal"
+          }
+        },
+        "scramble": {
+          "brand": {
+            "text": "GDUTCTF // 广工杯",
+            "chars": 12,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "enter": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certEnter": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "tabTitle": {
+            "text": "SPONSORS",
+            "chars": 8,
+            "spans": 0,
+            "greySpans": 0
+          },
+          "certTitle": {
+            "text": "",
+            "chars": 0,
+            "spans": 0,
+            "greySpans": 0
+          }
+        },
+        "headerBtns": [
+          {
+            "text": "HOME",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          },
+          {
+            "text": "CERTIFICATE",
+            "style": {
+              "background-color": "rgba(0, 0, 0, 0)",
+              "color": "rgb(170, 170, 170)",
+              "border": "0px none rgb(170, 170, 170)",
+              "letter-spacing": "2px",
+              "padding": "10px 0px",
+              "box-shadow": "none"
+            },
+            "after": {
+              "content": "\"]\"",
+              "opacity": "0",
+              "transform": "none"
+            },
+            "before": {
+              "content": "\"[\"",
+              "opacity": "0",
+              "transform": "none"
+            }
+          }
+        ],
+        "tabBtns": [
+          {
+            "text": "DETAIL",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "LEADERBOARD",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          },
+          {
+            "text": "SPONSORS",
+            "active": true,
+            "color": "rgb(255, 255, 255)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(255, 255, 255)"
+          },
+          {
+            "text": "ARCHIVES",
+            "active": false,
+            "color": "rgb(170, 170, 170)",
+            "letterSpacing": "3px",
+            "borderBottom": "0px none rgb(170, 170, 170)"
+          }
+        ],
+        "activeTab": "SPONSORS",
+        "yearItems": [
+          "2026",
+          "2025"
+        ],
+        "activeYear": "2026",
+        "detailText": "「广工杯」2026 网络安全竞赛 · 线上赛（演示数据）。本站为赛事归档页面，所有队伍、分数、赞助商均为占位内容，请在 script.js 的 DATABASE 中替换为真实数据。",
+        "rankRows": 5,
+        "sponsorCount": 5,
+        "sponsorNames": [
+          "广东工业大学",
+          "GDUT SecLab",
+          "广工开源社区",
+          "0xBlue",
+          "NightShift"
+        ],
+        "sponsorFirst": {
+          "borderColor": "rgba(255, 255, 255, 0.1)",
+          "background": "rgba(255, 255, 255, 0.03)",
+          "after": {
+            "opacity": "0",
+            "transform": "matrix(0.446339, 0.894864, -0.894864, 0.446339, 0, 0)",
+            "animation": "4s linear infinite rotateBorder",
+            "backgroundImage": "conic-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(255, 255, 255))"
+          }
+        },
+        "enterHoverState": {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 255, 255)",
+          "letterSpacing": "15px",
+          "transform": "none",
+          "boxShadow": "none"
+        },
+        "cert": {
+          "yearBtns": [],
+          "activeYear": null,
+          "inputValue": "",
+          "inputPlaceholder": "TEAM NAME // 队伍名称",
+          "resultText": null
+        },
+        "fonts": {
+          "status": "loaded",
+          "loaded": [
+            "Share Tech Mono 400"
+          ]
+        },
+        "decorRects": [
+          {
+            "cls": "home-decor decor-top-left",
+            "text": "",
+            "x": 180,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-top-right",
+            "text": "",
+            "x": 120,
+            "y": 40,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-left",
+            "text": "",
+            "x": 180,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-bottom-right",
+            "text": "",
+            "x": 120,
+            "y": 744,
+            "w": 195,
+            "h": 28
+          },
+          {
+            "cls": "home-decor decor-center-line",
+            "text": "",
+            "x": 120,
+            "y": 406,
+            "w": 255,
+            "h": 1
+          }
+        ],
+        "qaDecodeMs": null
+      }
+    }
+  },
+  "diagnostics": {
+    "exceptions": [],
+    "consoleErrors": [],
+    "networkErrors": [],
+    "failedRequests": []
+  },
+  "sources": [
+    "_diagnostics.json"
+  ]
+}

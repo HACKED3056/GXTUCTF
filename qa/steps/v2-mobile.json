@@ -1,0 +1,19 @@
+{
+  "label": "clone-v2-mobile",
+  "url": "http://127.0.0.1:8801/index.html",
+  "width": 375,
+  "height": 812,
+  "mobile": true,
+  "steps": [
+    { "wait": 1800 },
+    { "eval": "(() => JSON.stringify({ phase: 'mobile-home', yearItems: Array.from(document.querySelectorAll('.year-item')).map(el => el.innerText.trim()), certElements: document.querySelectorAll('.cert-enter-btn, #cert-view, [class*=\"cert\"], [id*=\"cert\"]').length, sponsorElements: document.querySelectorAll('#sponsor-container, .sponsor-grid, .sponsor-card').length, archiveElements: document.querySelectorAll('.minimal-link, #link-wp, #link-github').length, homeIconBtnCount: document.querySelectorAll('.home-icon-btn').length, tabBtnCount: document.querySelectorAll('.tab-btn').length, brandDisplay: getComputedStyle(document.querySelector('.brand-title')).display, enterRect: document.querySelector('.main-enter-btn').getBoundingClientRect().toJSON(), inner: { w: innerWidth, h: innerHeight } }))()" },
+    { "shot": "mobile-home.png" },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => JSON.stringify({ phase: 'mobile-data', activeView: (document.querySelector('.view.active') || {}).id || null, detailTitle: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, rankRows: document.querySelectorAll('#rank-tbody tr').length }))()" },
+    { "shot": "mobile-data.png" },
+    { "eval": "document.querySelectorAll('.tab-btn')[1].click(); true" },
+    { "wait": 700 },
+    { "eval": "(() => JSON.stringify({ phase: 'mobile-leaderboard', activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null, titleText: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, rowCount: document.querySelectorAll('#rank-tbody tr').length }))()" }
+  ]
+}

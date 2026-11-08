@@ -1,0 +1,13 @@
+{
+  "label": "leaderboard-empty",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 1600 },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "eval": "document.querySelectorAll('.tab-btn')[1].click(); true" },
+    { "wait": 700 },
+    { "eval": "(() => { const tb = document.getElementById('rank-tbody'); return JSON.stringify({ rows: tb.querySelectorAll('tr').length, text: tb.innerText.trim(), emptyRow: !!tb.querySelector('.table-empty'), placeholders: document.querySelectorAll('td[colspan]').length }); })()" },
+    { "shot": "leaderboard-empty.png" }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "label": "detail-verify",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    { "wait": 1500 },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "eval": "(() => { const d = document.getElementById('detail-text'); const t = d.innerText; return JSON.stringify({ hasRawTags: /<\\/?[a-z][^>]*>/i.test(t), shows_h4_literal: t.includes('<h4>'), shows_li_literal: t.includes('<li>'), shows_escaped: t.includes('&lt;'), htmlTagCount: d.querySelectorAll('*').length, textLen: t.length, firstLine: t.split('\\n').filter(Boolean)[0], lastLine: t.split('\\n').filter(Boolean).slice(-1)[0] }); })()" },
+    { "eval": "(() => { const d = document.getElementById('detail-text'); const out = []; d.querySelectorAll('h4,h5,li,p').forEach(el => { const isItem = el.tagName === 'LI' && el.parentElement.closest('ul') !== el.parentElement; out.push(el.tagName + ': ' + el.innerText.replace(/\\s+/g, ' ').trim()); }); return JSON.stringify({ outline: out }); })()" },
+    { "eval": "(() => { const d = document.getElementById('detail-text'); return JSON.stringify({ plainText: d.innerText.replace(/\\s+/g, ' ').trim() }); })()" }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "label": "clone-v2-assertions",
+  "url": "http://127.0.0.1:8801/index.html",
+  "steps": [
+    {
+      "wait": 1500
+    },
+    {
+      "eval": "(() => { const certEls = document.querySelectorAll('.cert-enter-btn, #cert-view, [class*=\"cert\"], [id*=\"cert\"]'); const sponsorEls = document.querySelectorAll('#sponsor-container, .sponsor-grid, .sponsor-card, .sponsor-link'); const archiveEls = document.querySelectorAll('.minimal-link, #link-wp, #link-github, #links, .link-group, [href*=\"cert\"]'); const tabs = document.querySelectorAll('.tab-btn'); const sections = document.querySelectorAll('section.tab-content'); const btns = document.querySelectorAll('.home-icon-btn'); return JSON.stringify({ phase: 'structure', tabBtnCount: tabs.length, tabBtnTexts: Array.from(tabs).map(b => b.textContent.trim()), sectionCount: sections.length, sectionIds: Array.from(sections).map(s => s.id), homeIconBtnCount: btns.length, certElementCount: certEls.length, sponsorElementCount: sponsorEls.length, archiveElementCount: archiveEls.length, certViewExists: !!document.getElementById('cert-view'), sponsorContainerExists: !!document.getElementById('sponsor-container'), linkWpExists: !!document.getElementById('link-wp'), tabContentCount: document.querySelectorAll('.tab-content').length, viewCount: document.querySelectorAll('.view').length, viewIds: Array.from(document.querySelectorAll('.view')).map(v => v.id), yearItems: Array.from(document.querySelectorAll('.year-item')).map(el => el.innerText.trim()), brandText: document.querySelector('.brand-title').innerText, brandSpans: document.querySelectorAll('.brand-title span').length, bodyHasGDUT: document.body.innerText.includes('GDUT'), bodyHasGXUTCTF: document.body.innerText.includes('GXUTCTF'), bodyHasGXTUCTF: document.body.innerText.includes('GXTUCTF'), title: document.title, metaDesc: (document.querySelector('meta[name=\"description\"]') || {}).content || null, decorTexts: Array.from(document.querySelectorAll('.home-decor')).map(el => el.innerText.trim()), openCertViewType: typeof window.openCertView, downloadCertificateType: typeof window.downloadCertificate, certDataType: typeof window.CERT_DATA, fontCheck: document.fonts.check('16px \"Share Tech Mono\"'), fontsStatus: document.fonts.status, certResources: performance.getEntriesByType('resource').map(r => r.name).filter(n => /cert|sponsor/i.test(n)), resourceFiles: performance.getEntriesByType('resource').map(r => r.name.split('/').pop()), enterHref: document.querySelector('.main-enter-btn').getAttribute('href') }); })()"
+    },
+    {
+      "eval": "(() => { const el = document.querySelector('.main-enter-btn'); const c = getComputedStyle(el); return JSON.stringify({ phase: 'enter-idle', text: el.innerText, bg: c.backgroundColor, color: c.color, letterSpacing: c.letterSpacing, transform: c.transform, transition: c.transition, clipPath: c.clipPath, minWidth: c.minWidth, fontSize: c.fontSize, fontWeight: c.fontWeight, border: c.border, rect: el.getBoundingClientRect().toJSON() }); })()"
+    },
+    {
+      "eval": "(() => { window.__qaMutations = 0; window.__qaObserver = new MutationObserver((muts) => { window.__qaMutations += muts.length; }); window.__qaObserver.observe(document.querySelector('.main-enter-btn'), { childList: true, subtree: true, characterData: true }); return 'observer-installed'; })()"
+    },
+    {
+      "wait": 300
+    },
+    {
+      "eval": "(() => JSON.stringify({ phase: 'enter-idle-mutations', mutations: window.__qaMutations }))()"
+    },
+    {
+      "hover": ".main-enter-btn"
+    },
+    {
+      "eval": "(() => { const el = document.querySelector('.main-enter-btn'); const spans = el.querySelectorAll('span'); let grey = 0; spans.forEach(s => { if (getComputedStyle(s).color === 'rgb(102, 102, 102)') grey++; }); const c = getComputedStyle(el); return JSON.stringify({ phase: 'enter-hover-immediate', text: el.innerText, spanCount: spans.length, greyCount: grey, bg: c.backgroundColor, color: c.color, letterSpacing: c.letterSpacing, transform: c.transform }); })()"
+    },
+    {
+      "wait": 400
+    },
+    {
+      "eval": "(() => { const el = document.querySelector('.main-enter-btn'); const c = getComputedStyle(el); return JSON.stringify({ phase: 'enter-hover-settled', text: el.innerText, spans: el.querySelectorAll('span').length, bg: c.backgroundColor, color: c.color, letterSpacing: c.letterSpacing, transform: c.transform, boxShadow: c.boxShadow }); })()"
+    },
+    {
+      "eval": "(() => JSON.stringify({ phase: 'enter-hover-mutations', mutations: window.__qaMutations, spans: document.querySelector('.main-enter-btn').querySelectorAll('span').length }))()"
+    },
+    {
+      "eval": "(() => { window.__qaObserver.disconnect(); return true; })()"
+    },
+    {
+      "hover": ".brand-title"
+    },
+    {
+      "wait": 700
+    },
+    {
+      "eval": "(() => { const el = document.querySelector('.main-enter-btn'); const c = getComputedStyle(el); return JSON.stringify({ phase: 'enter-after-leave', text: el.innerText, bg: c.backgroundColor, letterSpacing: c.letterSpacing, transform: c.transform }); })()"
+    },
+    {
+      "eval": "document.querySelector('.year-item').click(); true"
+    },
+    {
+      "wait": 900
+    },
+    {
+      "eval": "(() => { const r = { phase: 'year-2026-detail', activeYear: (document.querySelector('.year-item.active') || {}).innerText || null, yearCount: document.querySelectorAll('.year-item').length, activeView: (document.querySelector('.view.active') || {}).id || null, detailTitle: (document.querySelector('.tab-content.active .section-title') || {}).innerText || null, detailText: ((document.querySelector('#detail-text') || {}).innerText || '').slice(0, 80), rankRows: document.querySelectorAll('#rank-tbody tr').length, activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null }; return JSON.stringify(r); })()"
+    },
+    {
+      "eval": "(() => { const cs = (s) => { const el = document.querySelector(s); return el ? getComputedStyle(el) : null; }; const view = cs('#data-view'); const hb = document.querySelector('.home-icon-btn'); const hbBefore = hb ? getComputedStyle(hb, '::before') : null; const hbAfter = hb ? getComputedStyle(hb, '::after') : null; const activeTab = document.querySelector('.tab-btn.active'); const taAfter = activeTab ? getComputedStyle(activeTab, '::after') : null; return JSON.stringify({ phase: 'styles', viewTransition: { property: view.transitionProperty, duration: view.transitionDuration, timing: view.transitionTimingFunction }, headerBtnIdle: { color: hb ? hb.color : null, transition: hb ? hb.transition : null, beforeContent: hbBefore ? hbBefore.content : null, afterContent: hbAfter ? hbAfter.content : null, beforeOpacity: hbBefore ? hbBefore.opacity : null, afterOpacity: hbAfter ? hbAfter.opacity : null }, tabActiveUnderline: taAfter ? { content: taAfter.content, height: taAfter.height, background: taAfter.backgroundColor, bottom: taAfter.bottom, width: taAfter.width } : null, yearActiveBorderRight: (() => { const y = document.querySelector('.year-item.active'); return y ? getComputedStyle(y).borderRight : null; })(), sponsorGridExists: !!document.querySelector('.sponsor-grid'), sponsorCardExists: !!document.querySelector('.sponsor-card') }); })()"
+    },
+    {
+      "eval": "document.querySelectorAll('.tab-btn')[1].click(); true"
+    },
+    {
+      "wait": 80
+    },
+    {
+      "eval": "(() => { const t = document.querySelector('.tab-content.active .section-title'); const spans = t ? t.querySelectorAll('span') : []; let grey = 0; spans.forEach(s => { if (getComputedStyle(s).color === 'rgb(102, 102, 102)') grey++; }); const ths = Array.from(document.querySelectorAll('.minimal-table th')).map(th => th.innerText.trim()); return JSON.stringify({ phase: 'leaderboard-switch-80ms', activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null, titleText: t ? t.innerText : null, spanCount: spans.length, greyCount: grey, rowCount: document.querySelectorAll('#rank-tbody tr').length, thTexts: ths }); })()"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "eval": "(() => { const t = document.querySelector('.tab-content.active .section-title'); return JSON.stringify({ phase: 'leaderboard-settled', activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null, titleText: t ? t.innerText : null, spanCount: t ? t.querySelectorAll('span').length : null, rowCount: document.querySelectorAll('#rank-tbody tr').length, thTexts: Array.from(document.querySelectorAll('.minimal-table th')).map(th => th.innerText.trim()) }); })()"
+    },
+    {
+      "eval": "document.querySelectorAll('.tab-btn')[0].click(); true"
+    },
+    {
+      "wait": 80
+    },
+    {
+      "eval": "(() => { const t = document.querySelector('.tab-content.active .section-title'); const spans = t ? t.querySelectorAll('span') : []; let grey = 0; spans.forEach(s => { if (getComputedStyle(s).color === 'rgb(102, 102, 102)') grey++; }); return JSON.stringify({ phase: 'detail-switch-80ms', activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null, titleText: t ? t.innerText : null, spanCount: spans.length, greyCount: grey }); })()"
+    },
+    {
+      "wait": 600
+    },
+    {
+      "eval": "(() => { const t = document.querySelector('.tab-content.active .section-title'); return JSON.stringify({ phase: 'detail-settled', activeTab: (document.querySelector('.tab-btn.active') || {}).innerText || null, titleText: t ? t.innerText : null }); })()"
+    },
+    {
+      "hover": ".header-actions .home-icon-btn"
+    },
+    {
+      "wait": 400
+    },
+    {
+      "eval": "(() => { const hb = document.querySelector('.home-icon-btn'); const b = getComputedStyle(hb, '::before'); const a = getComputedStyle(hb, '::after'); return JSON.stringify({ phase: 'header-home-hover', hoverColor: getComputedStyle(hb).color, beforeOpacity: b.opacity, afterOpacity: a.opacity, beforeContent: b.content, afterContent: a.content }); })()"
+    },
+    {
+      "hover": ".brand-title"
+    },
+    {
+      "wait": 400
+    },
+    {
+      "eval": "(() => { const hb = document.querySelector('.home-icon-btn'); const b = getComputedStyle(hb, '::before'); return JSON.stringify({ phase: 'header-home-hover-end', color: getComputedStyle(hb).color, beforeOpacity: b.opacity }); })()"
+    }
+  ]
+}

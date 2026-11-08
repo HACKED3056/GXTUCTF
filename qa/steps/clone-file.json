@@ -1,0 +1,18 @@
+{
+  "label": "clone-file",
+  "url": "file:///C:/Users/HACKED/Desktop/%E5%B9%BF%E5%B7%A5%E6%9D%AF/index.html",
+  "steps": [
+    { "wait": 2500 },
+    { "eval": "(() => { const r = { href: location.href, readyState: document.readyState, fonts: document.fonts ? { status: document.fonts.status, count: [...document.fonts].length, loaded: [...document.fonts].map(f => f.family + ' / ' + f.weight + ' / ' + f.status) } : null, shareCheck: document.fonts ? document.fonts.check('16px \"Share Tech Mono\"') : null, scripts: [...document.scripts].map(s => s.src), stylesheets: [...document.styleSheets].map(s => s.href), favicon: (document.querySelector('link[rel=icon]') || {}).href || null, scrambleSpans: (document.querySelector('.brand-title') || {}).querySelectorAll ? document.querySelector('.brand-title').querySelectorAll('span').length : null }; return JSON.stringify(r); })()" },
+    { "shot": "file-home.png" },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "shot": "file-data.png" },
+    { "eval": "document.querySelectorAll('.tab-btn')[2].click(); document.querySelector('.content-area').scrollLeft = 0; true" },
+    { "wait": 700 },
+    { "shot": "file-tab-sponsors.png" },
+    { "eval": "document.querySelectorAll('.header-actions .home-icon-btn')[1].click(); true" },
+    { "wait": 800 },
+    { "shot": "file-cert.png" }
+  ]
+}

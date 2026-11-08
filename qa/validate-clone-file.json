@@ -1,0 +1,75 @@
+{
+  "dirs": [
+    "clone-file"
+  ],
+  "width": 1440,
+  "height": 900,
+  "total": 4,
+  "passed": 4,
+  "results": [
+    {
+      "file": "clone-file\\file-cert.png",
+      "name": "file-cert.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1440,
+      "height": 900,
+      "bright_ratio": 0.004063,
+      "dark_ratio": 0.980951,
+      "mean_luma": 11.71,
+      "std_luma": 19.12,
+      "unique_colors": 255,
+      "sampled_pixels": 144000,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "file": "clone-file\\file-data.png",
+      "name": "file-data.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1440,
+      "height": 900,
+      "bright_ratio": 0.002417,
+      "dark_ratio": 0.975583,
+      "mean_luma": 12.75,
+      "std_luma": 17.92,
+      "unique_colors": 251,
+      "sampled_pixels": 144000,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "file": "clone-file\\file-home.png",
+      "name": "file-home.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1440,
+      "height": 900,
+      "bright_ratio": 0.001799,
+      "dark_ratio": 0.986174,
+      "mean_luma": 10.8,
+      "std_luma": 15.29,
+      "unique_colors": 237,
+      "sampled_pixels": 144000,
+      "passed": true,
+      "reasons": []
+    },
+    {
+      "file": "clone-file\\file-tab-sponsors.png",
+      "name": "file-tab-sponsors.png",
+      "format": "PNG",
+      "mode": "RGB",
+      "width": 1440,
+      "height": 900,
+      "bright_ratio": 0.002222,
+      "dark_ratio": 0.985951,
+      "mean_luma": 12.02,
+      "std_luma": 16.59,
+      "unique_colors": 251,
+      "sampled_pixels": 144000,
+      "passed": true,
+      "reasons": []
+    }
+  ]
+}

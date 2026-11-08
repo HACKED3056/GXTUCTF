@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="广工杯 GDUTCTF 终端图标">
+  <!--
+    广工杯 · GDUTCTF 站点图标（favicon）
+    纯黑底 + 白色等宽终端提示符「>_」；全部为原生矢量形状，
+    不依赖字体、无外链、无滤镜，16x16 下仍清晰可辨。
+  -->
+  <title>广工杯 · GDUTCTF</title>
+  <rect width="64" height="64" fill="#000000"/>
+  <path d="M14 14 L30 32 L14 50" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter"/>
+  <rect x="40" y="43" width="14" height="8" fill="#ffffff"/>
+</svg>

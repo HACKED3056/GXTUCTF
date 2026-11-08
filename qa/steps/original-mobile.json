@@ -1,0 +1,17 @@
+{
+  "label": "original-mobile",
+  "url": "https://www.ctf.vin/",
+  "width": 375,
+  "height": 812,
+  "mobile": true,
+  "steps": [
+    { "wait": 1800 },
+    { "shot": "mobile-home.png" },
+    { "eval": "document.querySelector('.year-item').click(); true" },
+    { "wait": 900 },
+    { "shot": "mobile-data.png" },
+    { "eval": "document.querySelectorAll('.tab-btn')[2].click(); document.querySelector('.content-area').scrollLeft = 0; true" },
+    { "wait": 700 },
+    { "shot": "mobile-sponsors.png" }
+  ]
+}

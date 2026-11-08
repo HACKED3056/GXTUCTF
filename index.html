@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GXTUCTF // 广工杯 CTF ARCHIVE">
+    <title>GXTUCTF // 广工杯</title>
+
+    <!-- 站点图标 -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <!-- 自托管字体（Share Tech Mono，base64 内嵌，file:// 打开也可用） -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+    <!-- 主样式（?v= 用于破缓存：改了 css/js 后记得同步改版本号，避免浏览器仍用旧文件） -->
+    <link rel="stylesheet" href="styles.css?v=20261108b">
+</head>
+<body>
+
+    <header class="global-header">
+        <div class="header-actions">
+            <button class="home-icon-btn" onclick="closeView()" title="返回首页">
+                HOME
+            </button>
+        </div>
+        <div class="brand-title" data-scramble>广工杯 2026</div>
+    </header>
+
+    <div id="app-container">
+        <aside class="sidebar">
+            <nav class="year-nav">
+                <ul class="year-list" id="year-list-container">
+                    <!-- 年份列表由 script.js 渲染 -->
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content-area">
+            <!-- ============ 首页 ============ -->
+            <div id="home-view" class="view active">
+                <div class="home-decor decor-top-left">SYSTEM_VERSION: GXTUCTF_v1.0</div>
+                <div class="home-decor decor-top-right">NODE_STATUS: STABLE [OK]</div>
+                <div class="home-decor decor-bottom-left">LAT: 24.3264 | LON: 109.4281</div>
+                <div class="home-decor decor-bottom-right">GXTU_SAFE_LAB // ARCHIVE_INIT</div>
+                <div class="home-decor decor-center-line"></div>
+
+                <div class="center-content">
+                    <div class="home-actions">
+                        <!-- ENTER 链接地址在 script.js 的 CONFIG.enterUrl 中配置 -->
+                        <a href="#" id="enter-link" target="_blank" rel="noopener" class="main-enter-btn">ENTER</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============ 数据视图 ============ -->
+            <div id="data-view" class="view">
+                <nav class="tab-nav">
+                    <button class="tab-btn active" onclick="switchTab('detail', this)">DETAIL</button>
+                    <button class="tab-btn" onclick="switchTab('rank', this)">LEADERBOARD</button>
+                </nav>
+
+                <div class="panel-container">
+                    <section id="detail" class="tab-content active">
+                        <h3 class="section-title" data-scramble>2026 DETAIL</h3>
+                        <div class="info-card">
+                            <div id="detail-text" class="detail-body">Loading...</div>
+                        </div>
+                    </section>
+
+                    <section id="rank" class="tab-content">
+                        <h3 class="section-title" data-scramble>LEADERBOARD</h3>
+                        <div class="table-wrapper">
+                            <table class="minimal-table">
+                                <thead>
+                                    <tr>
+                                        <th>RANK</th>
+                                        <th>TEAM</th>
+                                        <th>SCORE</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rank-tbody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js?v=20261108b"></script>
+</body>
+</html>

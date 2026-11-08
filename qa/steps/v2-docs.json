@@ -1,0 +1,21 @@
+{
+  "label": "clone-v2-docs-1200x750",
+  "url": "http://127.0.0.1:8801/index.html",
+  "width": 1200,
+  "height": 750,
+  "steps": [
+    { "wait": 1800 },
+    { "shot": "screenshot-home.png" },
+    { "hover": ".main-enter-btn" },
+    { "wait": 400 },
+    { "shot": "screenshot-home-hover.png" },
+    { "hover": ".brand-title" },
+    { "wait": 700 },
+    { "click": ".year-item" },
+    { "wait": 900 },
+    { "shot": "screenshot-detail.png" },
+    { "click": ".tab-btn:nth-child(2)" },
+    { "wait": 700 },
+    { "shot": "screenshot-leaderboard.png" }
+  ]
+}
